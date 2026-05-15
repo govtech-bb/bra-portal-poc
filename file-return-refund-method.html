@@ -39,9 +39,9 @@
           <div class="form-page__heading">
             <span class="form-page__service-title govbb-text-body">File your Personal Income Tax return for 2025</span>
             <p class="progress">Step 5 of 6</p>
-            <h1 class="govbb-text-display">How do you want to be paid your refund?</h1>
+            <h1 class="govbb-text-display">Where should we send your refund?</h1>
             <p class="govbb-text-body">
-              Based on what you&rsquo;ve told us, you&rsquo;re owed a refund. Choose how you&rsquo;d like to receive it.
+              Based on what you&rsquo;ve told us, you&rsquo;re owed a refund. We&rsquo;ll send it to the bank account below.
             </p>
           </div>
 
@@ -52,105 +52,31 @@
           </div>
 
           <section class="section">
-            <h2 class="govbb-text-h2">How would you like to receive it?</h2>
+            <h2 class="govbb-text-h2">Your bank details</h2>
+            <p class="govbb-text-body">We&rsquo;ll pay your refund into your bank account by direct deposit.</p>
 
             <div class="govbb-form-group">
-              <fieldset class="govbb-fieldset">
-                <legend class="govbb-fieldset__legend govbb-visually-hidden">Refund method</legend>
-                <div class="radio-options">
-
-                  <div class="radio-option">
-                    <input class="govbb-radio" id="m-direct" type="radio" name="method" value="direct" checked />
-                    <div class="radio-option__body">
-                      <label class="radio-option__label govbb-text-body" for="m-direct">Direct deposit to your bank account <span class="preset-badge">Fastest</span></label>
-                      <p class="radio-option__hint govbb-text-body">We&rsquo;ll pay your refund into your bank account within 14 working days.</p>
-                    </div>
-                  </div>
-
-                  <div class="radio-option">
-                    <input class="govbb-radio" id="m-cheque" type="radio" name="method" value="cheque" />
-                    <div class="radio-option__body">
-                      <label class="radio-option__label govbb-text-body" for="m-cheque">Cheque sent in the post</label>
-                      <p class="radio-option__hint govbb-text-body">We&rsquo;ll post a cheque to the address on your account. This usually takes 4 to 6 weeks.</p>
-                    </div>
-                  </div>
-
-                  <div class="radio-option">
-                    <input class="govbb-radio" id="m-certificates" type="radio" name="method" value="certificates" />
-                    <div class="radio-option__body">
-                      <label class="radio-option__label govbb-text-body" for="m-certificates">Tax refund certificates</label>
-                      <p class="radio-option__hint govbb-text-body">Certificates you can use against future tax bills, or transfer to a family member who is also a BRA taxpayer.</p>
-                    </div>
-                  </div>
-
-                </div>
-              </fieldset>
-            </div>
-
-            <!-- Direct deposit details -->
-            <div class="reveal reveal--shown" id="direct-reveal">
-              <h3 class="govbb-text-h3">Your bank details</h3>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="bank-name">Bank</label>
-                <div class="govbb-input-wrapper">
-                  <select class="govbb-input" id="bank-name">
-                    <option value="">Choose a bank</option>
-                    <option>CIBC Caribbean</option>
-                    <option>First Citizens Bank</option>
-                    <option>RBC Royal Bank</option>
-                    <option>Republic Bank</option>
-                    <option>Scotiabank</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="bank-branch">Branch</label>
-                <div class="govbb-input-wrapper" style="max-width: 24rem;"><input class="govbb-input" id="bank-branch" type="text" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="bank-account">Account number</label>
-                <p class="govbb-hint">We&rsquo;ll only use this account to pay your refund.</p>
-                <div class="govbb-input-wrapper" style="max-width: 16rem;"><input class="govbb-input" id="bank-account" type="text" inputmode="numeric" /></div>
+              <label class="govbb-label" for="bank-name">Bank</label>
+              <div class="govbb-input-wrapper">
+                <select class="govbb-input" id="bank-name">
+                  <option value="">Choose a bank</option>
+                  <option>CIBC Caribbean</option>
+                  <option>First Citizens Bank</option>
+                  <option>RBC Royal Bank</option>
+                  <option>Republic Bank</option>
+                  <option>Scotiabank</option>
+                  <option>Other</option>
+                </select>
               </div>
             </div>
-
-            <!-- Cheque -->
-            <div class="reveal" id="cheque-reveal">
-              <p class="govbb-text-body">We&rsquo;ll post the cheque to:</p>
-              <p class="govbb-text-body" style="font-weight: var(--font-weight-bold);">
-                Jane Smith<br />
-                23 Garden Land, Christ Church<br />
-                Barbados BB17052
-              </p>
-              <p class="govbb-text-body">
-                <a class="govbb-link" href="#">Change my address</a>
-              </p>
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="bank-branch">Branch</label>
+              <div class="govbb-input-wrapper" style="max-width: 24rem;"><input class="govbb-input" id="bank-branch" type="text" /></div>
             </div>
-
-            <!-- Certificates -->
-            <div class="reveal" id="certificates-reveal">
-              <p class="govbb-text-body">Choose how to split your BDS$ 350.00 across certificates. Each certificate has a fixed value.</p>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="cert-50">Number of BDS$ 50 certificates</label>
-                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-50" type="text" inputmode="numeric" value="0" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="cert-100">Number of BDS$ 100 certificates</label>
-                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-100" type="text" inputmode="numeric" value="3" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="cert-500">Number of BDS$ 500 certificates</label>
-                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-500" type="text" inputmode="numeric" value="0" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="cert-1000">Number of BDS$ 1,000 certificates</label>
-                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-1000" type="text" inputmode="numeric" value="0" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="cert-5000">Number of BDS$ 5,000 certificates</label>
-                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-5000" type="text" inputmode="numeric" value="0" /></div>
-              </div>
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="bank-account">Account number</label>
+              <p class="govbb-hint">We&rsquo;ll only use this account to pay your refund.</p>
+              <div class="govbb-input-wrapper" style="max-width: 16rem;"><input class="govbb-input" id="bank-account" type="text" inputmode="numeric" /></div>
             </div>
           </section>
 
@@ -177,25 +103,6 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      (function () {
-        var radios = document.querySelectorAll('input[name="method"]');
-        var reveals = {
-          'direct':       document.getElementById('direct-reveal'),
-          'cheque':       document.getElementById('cheque-reveal'),
-          'certificates': document.getElementById('certificates-reveal')
-        };
-        function update() {
-          var picked = document.querySelector('input[name="method"]:checked');
-          Object.keys(reveals).forEach(function (k) {
-            reveals[k].classList.toggle('reveal--shown', picked && picked.value === k);
-          });
-        }
-        radios.forEach(function (r) { r.addEventListener('change', update); });
-        update();
-      })();
-    </script>
 
   </body>
 </html>

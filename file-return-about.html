@@ -109,7 +109,6 @@
                   <option value="">Choose one</option>
                   <option>Single</option>
                   <option>Married</option>
-                  <option>Living with a partner (common-law)</option>
                   <option>Separated</option>
                   <option>Divorced</option>
                   <option>Widowed</option>
@@ -291,6 +290,7 @@
             <div class="govbb-form-group">
               <fieldset class="govbb-fieldset">
                 <legend class="govbb-fieldset__legend">Were you a director of a company in 2025?</legend>
+                <p class="govbb-hint">&lsquo;Company&rsquo; here means a company as defined in the Companies Act, Cap. 308.</p>
                 <div class="radio-options">
                   <div class="radio-option">
                     <input class="govbb-radio" id="director-yes" type="radio" name="director" value="yes" />
@@ -307,27 +307,6 @@
                 </div>
               </fieldset>
             </div>
-
-            <div class="govbb-form-group">
-              <fieldset class="govbb-fieldset">
-                <legend class="govbb-fieldset__legend">Are you filing this return for a Trust?</legend>
-                <p class="govbb-hint">A Trust is a legal arrangement that holds assets for someone else.</p>
-                <div class="radio-options">
-                  <div class="radio-option">
-                    <input class="govbb-radio" id="trust-yes" type="radio" name="trust" value="yes" />
-                    <div class="radio-option__body">
-                      <label class="radio-option__label govbb-text-body" for="trust-yes">Yes</label>
-                    </div>
-                  </div>
-                  <div class="radio-option">
-                    <input class="govbb-radio" id="trust-no" type="radio" name="trust" value="no" checked />
-                    <div class="radio-option__body">
-                      <label class="radio-option__label govbb-text-body" for="trust-no">No</label>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
           </section>
 
           <!-- Section: Land Tax (optional) -->
@@ -336,8 +315,16 @@
             <p class="govbb-text-body">If you own property in Barbados, you can link your Land Tax bills to this return. We&rsquo;ll use them to check for any allowances you can claim.</p>
 
             <div class="govbb-form-group">
+              <label class="govbb-label" for="land-tax-map">Land Tax Map Reference number</label>
+              <p class="govbb-hint" id="land-tax-map-hint">Enter exactly as it appears on your bill or receipt.</p>
+              <div class="govbb-input-wrapper">
+                <input class="govbb-input" id="land-tax-map" name="land-tax-map" type="text" aria-describedby="land-tax-map-hint" />
+              </div>
+            </div>
+
+            <div class="govbb-form-group">
               <label class="govbb-label" for="land-tax">Land Tax bill reference numbers</label>
-              <p class="govbb-hint" id="land-tax-hint">Separate more than one reference with a comma.</p>
+              <p class="govbb-hint" id="land-tax-hint">Enter exactly as it appears on your bill or receipt. Separate more than one reference with a comma.</p>
               <div class="govbb-input-wrapper">
                 <input class="govbb-input" id="land-tax" name="land-tax" type="text" aria-describedby="land-tax-hint" />
               </div>
@@ -382,7 +369,7 @@
         var marital = document.getElementById('marital');
         var spouseWrap = document.getElementById('spouse-wrap');
         marital.addEventListener('change', function () {
-          var isMarried = marital.value === 'Married' || marital.value === 'Living with a partner (common-law)';
+          var isMarried = marital.value === 'Married';
           toggle(spouseWrap, isMarried);
         });
 
