@@ -100,7 +100,7 @@
                     <input class="govbb-radio" id="ok-no" type="radio" name="employer-ok" value="no" />
                     <div class="radio-option__body">
                       <label class="radio-option__label govbb-text-body" for="ok-no">No, I need to correct something</label>
-                      <p class="radio-option__hint govbb-text-body">You&rsquo;ll be able to enter the right numbers below.</p>
+                      <p class="radio-option__hint govbb-text-body">You&rsquo;ll need to contact your employer to have these figures updated. Once they are corrected, enter the right numbers below.</p>
                     </div>
                   </div>
                 </div>
@@ -124,61 +124,6 @@
               <div class="govbb-form-group">
                 <label class="govbb-label" for="corr-tax">Corrected tax taken out (PAYE)</label>
                 <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="corr-tax" type="text" inputmode="decimal" /></div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Add another employer -->
-          <section class="section">
-            <h2 class="govbb-text-h2">Did you have other pay we don&rsquo;t know about?</h2>
-            <p class="govbb-text-body">
-              For example, pay from a second job, work for an overseas employer, or pay that wasn&rsquo;t reported through PAYE.
-            </p>
-
-            <div class="govbb-form-group">
-              <fieldset class="govbb-fieldset">
-                <legend class="govbb-fieldset__legend govbb-visually-hidden">Other pay?</legend>
-                <div class="radio-options">
-                  <div class="radio-option">
-                    <input class="govbb-radio" id="other-no" type="radio" name="other-pay" value="no" checked />
-                    <div class="radio-option__body">
-                      <label class="radio-option__label govbb-text-body" for="other-no">No, this is everything</label>
-                    </div>
-                  </div>
-                  <div class="radio-option">
-                    <input class="govbb-radio" id="other-yes" type="radio" name="other-pay" value="yes" />
-                    <div class="radio-option__body">
-                      <label class="radio-option__label govbb-text-body" for="other-yes">Yes, I had other pay</label>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="reveal" id="other-reveal">
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="add-employer">Employer name</label>
-                <div class="govbb-input-wrapper"><input class="govbb-input" id="add-employer" type="text" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="add-total">Total pay (basic salary plus benefits)</label>
-                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-total" type="text" inputmode="decimal" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="add-basic">Basic salary</label>
-                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-basic" type="text" inputmode="decimal" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="add-tax">Tax taken out (PAYE)</label>
-                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-tax" type="text" inputmode="decimal" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="add-tax-salary">Tax your employer paid on top of your salary <span class="optional-badge">Optional</span></label>
-                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-tax-salary" type="text" inputmode="decimal" /></div>
-              </div>
-              <div class="govbb-form-group">
-                <label class="govbb-label" for="add-tax-housing">Tax your employer paid on your housing benefit <span class="optional-badge">Optional</span></label>
-                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-tax-housing" type="text" inputmode="decimal" /></div>
               </div>
             </div>
           </section>
@@ -298,7 +243,6 @@
           update();
         }
         bindReveal('employer-ok', 'no', 'correction-reveal');
-        bindReveal('other-pay', 'yes', 'other-reveal');
       })();
     </script>
 
