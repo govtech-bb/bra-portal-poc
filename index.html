@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRA online services: sign in or set up an account &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <style>
+      .service-page {
+        padding-block: var(--spacing-m);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-m);
+      }
+      .service__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-m);
+      }
+      .service__main {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-m);
+      }
+      .service__meta {
+        padding-bottom: var(--spacing-s);
+        border-bottom: 4px solid var(--color-blue-10);
+        color: var(--color-mid-grey-00);
+      }
+      .service__sections {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-m);
+      }
+      .service__section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-s);
+      }
+      .service__cta {
+        align-self: flex-start;
+      }
+      .service__feedback {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+        border: 4px solid var(--color-yellow-100);
+        background: var(--color-yellow-40);
+        padding: var(--spacing-xm) var(--spacing-s);
+      }
+      .contents {
+        background: var(--color-blue-10);
+        padding: var(--spacing-s) var(--spacing-xm);
+        align-self: stretch;
+      }
+      .contents h2 {
+        margin: 0 0 var(--spacing-xs) 0;
+        color: var(--color-mid-grey-00);
+      }
+      .contents ol {
+        margin: 0;
+        padding-left: var(--spacing-xm);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+      }
+      .contents li[aria-current="page"] {
+        color: var(--color-text);
+        font-weight: var(--font-weight-bold);
+      }
+      .next-step {
+        margin-top: var(--spacing-m);
+        padding-top: var(--spacing-s);
+        border-top: 4px solid var(--color-blue-10);
+      }
+      .next-step__label {
+        display: block;
+        color: var(--color-mid-grey-00);
+        margin: 0 0 var(--spacing-xxs) 0;
+        @apply govbb-text-caption;
+      }
+      .next-step__link {
+        @apply govbb-text-h3;
+        font-weight: var(--font-weight-bold);
+      }
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-s);
+      }
+      .sidebar__block {
+        padding: var(--spacing-s);
+        background: var(--color-grey-00);
+      }
+      .sidebar__block h3 {
+        margin: 0 0 var(--spacing-xs) 0;
+      }
+      .sidebar__block ul {
+        margin: 0;
+        padding-left: var(--spacing-xm);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+      }
+      @media (width >= 1024px) {
+        .service__grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: var(--spacing-xl);
+        }
+        .service__main {
+          grid-column: span 2;
+        }
+      }
+    </style>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest">
+            <img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" />
+          </div>
+          <div class="govbb-official-banner__text">
+            <span>Official government website</span>
+          </div>
+        </div>
+      </div>
+
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+
+      <div
+        class="govbb-status-banner govbb-status-banner--alpha"
+        role="status"
+        aria-label="alpha status banner"
+        aria-live="polite"
+      >
+        <div class="govbb-container">
+          <p>
+            This page is in
+            <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="govbb-container service-page">
+
+        <nav class="govbb-breadcrumbs" aria-label="Breadcrumb">
+          <ol class="govbb-breadcrumbs__list">
+            <li class="govbb-breadcrumbs__item">
+              <a class="govbb-breadcrumbs__link" href="#">Home</a>
+            </li>
+            <li class="govbb-breadcrumbs__item">
+              <a class="govbb-breadcrumbs__link" href="#">Money and tax</a>
+            </li>
+            <li class="govbb-breadcrumbs__item">
+              <a class="govbb-breadcrumbs__link" href="#">Dealing with BRA</a>
+            </li>
+            <li class="govbb-breadcrumbs__item" aria-current="page">
+              Sign in to your BRA online account
+            </li>
+          </ol>
+        </nav>
+
+        <div class="service__grid">
+
+          <div class="service__main">
+
+            <h1 class="govbb-text-display">BRA online services: sign in or set up an account</h1>
+
+            <div class="service__meta">
+              <p class="govbb-text-caption">Last updated: 4 May 2026</p>
+            </div>
+
+            <!-- Contents (mirrors the GOV.UK "Contents" navigation block) -->
+            <aside class="contents" aria-label="Contents">
+              <h2 class="govbb-text-caption">Contents</h2>
+              <ol>
+                <li aria-current="page">Sign in or set up an account</li>
+                <li><a class="govbb-link" href="#help">Get help with signing in to BRA online services</a></li>
+              </ol>
+            </aside>
+
+            <div class="service__sections">
+
+              <section class="service__section" aria-labelledby="sign-in-or-set-up">
+                <h2 id="sign-in-or-set-up" class="govbb-text-h2">Sign in or set up an account</h2>
+
+                <p class="govbb-text-body">
+                  Sign in to your Barbados Revenue Authority (BRA) online account for things like
+                  Pay As You Earn (PAYE), Personal Income Tax, Value Added Tax (VAT), Corporation
+                  Tax and Property and Land Tax.
+                </p>
+                <p class="govbb-text-body">
+                  If you do not already have sign in details, you&rsquo;ll be able to create them.
+                </p>
+
+                <a class="govbb-btn service__cta" href="sign-in.html">Sign in</a>
+              </section>
+
+              <section class="service__section" aria-labelledby="which-sign-in">
+                <h2 id="which-sign-in" class="govbb-text-h2">Which sign in details to use</h2>
+
+                <p class="govbb-text-body">There are 3 ways to sign in to BRA online services:</p>
+
+                <ul class="govbb-list govbb-list--bullet">
+                  <li><strong>TAMIS account</strong> &mdash; sign in with your Taxpayer Identification Number (TIN) and password</li>
+                  <li><strong>Trident ID</strong> &mdash; sign in with your Trident ID and password (this also works across other government services on alpha.gov.bb)</li>
+                  <li><strong>National Registration Number (NRN)</strong> &mdash; sign in with your NRN and password</li>
+                </ul>
+
+                <h3 class="govbb-text-h3">If you already use BRA online services</h3>
+                <p class="govbb-text-body">
+                  Continue to use the sign in details you have. This could be:
+                </p>
+                <ul class="govbb-list govbb-list--bullet">
+                  <li>your existing TAMIS account &mdash; even if you have a Trident ID from another government service</li>
+                  <li>a Trident ID &mdash; for personal tax services</li>
+                </ul>
+
+                <h3 class="govbb-text-h3">If you have never used BRA online services</h3>
+                <p class="govbb-text-body">
+                  Choose <strong>&lsquo;Create new sign in details&rsquo;</strong> when signing in to BRA online services,
+                  even if you have a Trident ID from another government service or are signed up for BRA email
+                  updates.
+                </p>
+                <p class="govbb-text-body">
+                  The service will guide you to create a TAMIS account or a Trident ID.
+                </p>
+              </section>
+
+              <section class="service__section" aria-labelledby="what-you-can-do">
+                <h2 id="what-you-can-do" class="govbb-text-h2">What you can do with your BRA online account</h2>
+                <p class="govbb-text-body">You can access different services through:</p>
+                <ul class="govbb-list govbb-list--bullet">
+                  <li>your <a class="govbb-link" href="dashboard.html">personal tax account</a></li>
+                  <li>your <a class="govbb-link" href="#">business tax account</a></li>
+                  <li><a class="govbb-link" href="#">tax agent accounts</a> for accountants and advisers</li>
+                </ul>
+              </section>
+
+              <section class="service__section" aria-labelledby="services-separate">
+                <h2 id="services-separate" class="govbb-text-h2">Services you sign in to separately</h2>
+                <p class="govbb-text-body">There&rsquo;s a different way to sign in for:</p>
+                <ul class="govbb-list govbb-list--bullet">
+                  <li><a class="govbb-link" href="#">customs and excise services</a></li>
+                  <li><a class="govbb-link" href="#">National Insurance and Pensions (NIS) account</a></li>
+                  <li><a class="govbb-link" href="https://tamis.bra.gov.bb/" target="_blank" rel="noopener">TAMIS (advanced filing features)</a></li>
+                </ul>
+              </section>
+
+              <section class="service__section" id="help" aria-labelledby="help-heading">
+                <h2 id="help-heading" class="govbb-text-h2">Get help with signing in</h2>
+                <p class="govbb-text-body">
+                  If you cannot sign in, call BRA on <strong>246-429-2273</strong> between 8:30am and 4:30pm,
+                  Monday to Friday. Have your TIN ready when you call.
+                </p>
+                <p class="govbb-text-body">
+                  You can also <a class="govbb-link" href="#">reset your password</a> or
+                  <a class="govbb-link" href="#">request a new TIN</a> online.
+                </p>
+              </section>
+
+            </div>
+
+            <div class="next-step">
+              <span class="next-step__label govbb-text-caption">Next</span>
+              <a class="next-step__link govbb-link" href="sign-in.html">Sign in to BRA online services</a>
+            </div>
+
+            <div class="service__feedback">
+              <h3 class="govbb-text-h3">Was this helpful?</h3>
+              <p class="govbb-text-body">Give us your feedback about this page.</p>
+              <a class="govbb-link govbb-link--secondary govbb-font-body" href="#">Help us improve alpha.gov.bb</a>
+            </div>
+
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="sidebar" aria-label="Related content">
+            <div class="sidebar__block">
+              <h3 class="govbb-text-h4">Related content</h3>
+              <ul>
+                <li><a class="govbb-link" href="#">BRA service availability and issues</a></li>
+                <li><a class="govbb-link" href="#">Paying BRA: detailed information</a></li>
+              </ul>
+            </div>
+            <div class="sidebar__block">
+              <h3 class="govbb-text-h4">Explore the topic</h3>
+              <ul>
+                <li><a class="govbb-link" href="#">Business tax and returns</a></li>
+                <li><a class="govbb-link" href="#">Payroll (PAYE)</a></li>
+                <li><a class="govbb-link" href="#">Income Tax</a></li>
+                <li><a class="govbb-link" href="#">VAT</a></li>
+                <li><a class="govbb-link" href="#">Property and Land Tax</a></li>
+              </ul>
+            </div>
+          </aside>
+
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="/">Home</a>
+          <a class="govbb-footer__link" href="#">Terms &amp; Conditions</a>
+          <a class="govbb-footer__link" href="#">Privacy</a>
+          <a class="govbb-footer__link" href="#">Cookie Policy</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img
+            class="govbb-footer__coat"
+            src="assets/images/govbb-creast.svg"
+            alt="Government of Barbados Coat of Arms"
+          />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

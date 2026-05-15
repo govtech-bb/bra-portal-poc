@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your pay from employers &mdash; File your Personal Income Tax return for 2025 &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <link rel="stylesheet" href="assets/return-flow.css" />
+    <script src="assets/flow.js" defer></script>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest"><img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" /></div>
+          <div class="govbb-official-banner__text"><span>Official government website</span></div>
+        </div>
+      </div>
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+      <div class="govbb-status-banner govbb-status-banner--alpha" role="status" aria-label="alpha status banner" aria-live="polite">
+        <div class="govbb-container"><p>This page is in <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.</p></div>
+      </div>
+
+      <div class="govbb-container">
+        <form class="form-page" action="file-return-pension.html" method="get" novalidate>
+
+          <a class="back-link" href="file-return-income-types.html">Back</a>
+
+          <div class="form-page__heading">
+            <span class="form-page__service-title govbb-text-body">File your Personal Income Tax return for 2025</span>
+            <p class="progress">Step 3 of 6 &mdash; Your income</p>
+            <h1 class="govbb-text-display">Your pay from employers</h1>
+            <p class="govbb-text-body">
+              Your employer reported the following income to BRA. Check it is correct and tell us about anything that is missing.
+            </p>
+          </div>
+
+          <!-- Pre-filled employer data -->
+          <section class="section">
+            <h2 class="govbb-text-h2">Pay your employer reported</h2>
+
+            <div class="data-card" aria-labelledby="employer-1">
+              <div class="data-card__head">
+                <h3 id="employer-1" class="govbb-text-h3" style="margin: 0;">Goddard Enterprises Ltd.</h3>
+                <span class="data-card__source">Reported by your employer</span>
+              </div>
+              <dl class="data-card__rows">
+                <div class="data-card__row">
+                  <dt>Employer TIN</dt>
+                  <dd class="currency">200&#8209;987&#8209;654</dd>
+                </div>
+                <div class="data-card__row">
+                  <dt>Period worked</dt>
+                  <dd>1 January &mdash; 31 December 2025</dd>
+                </div>
+                <div class="data-card__row">
+                  <dt>Total pay (basic salary plus benefits)</dt>
+                  <dd class="currency">BDS$ 75,000.00</dd>
+                </div>
+                <div class="data-card__row">
+                  <dt>Basic salary</dt>
+                  <dd class="currency">BDS$ 72,000.00</dd>
+                </div>
+                <div class="data-card__row">
+                  <dt>Tax taken out (PAYE)</dt>
+                  <dd class="currency">BDS$ 11,200.00</dd>
+                </div>
+                <div class="data-card__row">
+                  <dt>Tax your employer paid on top of your salary</dt>
+                  <dd class="currency">BDS$ 0.00</dd>
+                </div>
+                <div class="data-card__row">
+                  <dt>Tax your employer paid on your housing benefit</dt>
+                  <dd class="currency">BDS$ 0.00</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="govbb-form-group" style="margin-top: var(--spacing-s);">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend">Is this information correct?</legend>
+                <div class="radio-options">
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="ok-yes" type="radio" name="employer-ok" value="yes" checked />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="ok-yes">Yes, this is correct</label>
+                    </div>
+                  </div>
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="ok-no" type="radio" name="employer-ok" value="no" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="ok-no">No, I need to correct something</label>
+                      <p class="radio-option__hint govbb-text-body">You&rsquo;ll be able to enter the right numbers below.</p>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="reveal" id="correction-reveal">
+              <div class="callout callout--info">
+                <p class="govbb-text-body">
+                  Enter the correct amounts. We&rsquo;ll send these to your employer for confirmation. Leave fields blank if no change is needed.
+                </p>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="corr-total">Corrected total pay</label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="corr-total" type="text" inputmode="decimal" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="corr-basic">Corrected basic salary</label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="corr-basic" type="text" inputmode="decimal" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="corr-tax">Corrected tax taken out (PAYE)</label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="corr-tax" type="text" inputmode="decimal" /></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Add another employer -->
+          <section class="section">
+            <h2 class="govbb-text-h2">Did you have other pay we don&rsquo;t know about?</h2>
+            <p class="govbb-text-body">
+              For example, pay from a second job, work for an overseas employer, or pay that wasn&rsquo;t reported through PAYE.
+            </p>
+
+            <div class="govbb-form-group">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend govbb-visually-hidden">Other pay?</legend>
+                <div class="radio-options">
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="other-no" type="radio" name="other-pay" value="no" checked />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="other-no">No, this is everything</label>
+                    </div>
+                  </div>
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="other-yes" type="radio" name="other-pay" value="yes" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="other-yes">Yes, I had other pay</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="reveal" id="other-reveal">
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="add-employer">Employer name</label>
+                <div class="govbb-input-wrapper"><input class="govbb-input" id="add-employer" type="text" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="add-total">Total pay (basic salary plus benefits)</label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-total" type="text" inputmode="decimal" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="add-basic">Basic salary</label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-basic" type="text" inputmode="decimal" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="add-tax">Tax taken out (PAYE)</label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-tax" type="text" inputmode="decimal" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="add-tax-salary">Tax your employer paid on top of your salary <span class="optional-badge">Optional</span></label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-tax-salary" type="text" inputmode="decimal" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="add-tax-housing">Tax your employer paid on your housing benefit <span class="optional-badge">Optional</span></label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-tax-housing" type="text" inputmode="decimal" /></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Allowable employment expenses -->
+          <section class="section">
+            <h2 class="govbb-text-h2">Allowances and expenses</h2>
+            <p class="govbb-text-body">Tick anything that applies to your employment in 2025.</p>
+
+            <div class="govbb-form-group">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend govbb-visually-hidden">Employment allowances</legend>
+
+                <div class="checkbox-options">
+
+                  <div class="checkbox-option">
+                    <input class="govbb-checkbox" id="exp-bonus-shares" type="checkbox" name="exp" value="bonus-shares" />
+                    <div class="checkbox-option__body">
+                      <label class="checkbox-option__label govbb-text-body" for="exp-bonus-shares">Bonus you took as company shares</label>
+                      <p class="checkbox-option__hint govbb-text-body">If your employer gave you a bonus and you chose to receive it as shares in the company, you can deduct it here.</p>
+                      <div class="amount-field govbb-form-group">
+                        <label class="govbb-label" for="exp-bonus-shares-amount">Amount</label>
+                        <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="exp-bonus-shares-amount" type="text" inputmode="decimal" /></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="checkbox-option">
+                    <input class="govbb-checkbox" id="exp-travel" type="checkbox" name="exp" value="travel" />
+                    <div class="checkbox-option__body">
+                      <label class="checkbox-option__label govbb-text-body" for="exp-travel">Travelling allowance</label>
+                      <p class="checkbox-option__hint govbb-text-body">A travel allowance paid by your employer that is exempt from tax.</p>
+                      <div class="amount-field govbb-form-group">
+                        <label class="govbb-label" for="exp-travel-amount">Amount</label>
+                        <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="exp-travel-amount" type="text" inputmode="decimal" /></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="checkbox-option">
+                    <input class="govbb-checkbox" id="exp-gratuity" type="checkbox" name="exp" value="gratuity" />
+                    <div class="checkbox-option__body">
+                      <label class="checkbox-option__label govbb-text-body" for="exp-gratuity">Half of a government contract gratuity</label>
+                      <p class="checkbox-option__hint govbb-text-body">You can deduct 50% of a gratuity paid at the end of a government contract.</p>
+                      <div class="amount-field govbb-form-group">
+                        <label class="govbb-label" for="exp-gratuity-amount">Half the gratuity amount</label>
+                        <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="exp-gratuity-amount" type="text" inputmode="decimal" /></div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <details style="margin-top: var(--spacing-s);">
+              <summary class="govbb-link" style="cursor: pointer; font-weight: var(--font-weight-bold);">Other allowances (judges, foreign service officers, non-nationals)</summary>
+              <div style="margin-top: var(--spacing-s); display: flex; flex-direction: column; gap: var(--spacing-s);">
+
+                <div class="govbb-form-group">
+                  <label class="govbb-label" for="exp-judiciary">Judiciary allowance <span class="optional-badge">For judges only</span></label>
+                  <p class="govbb-hint">A special allowance paid to members of the judiciary.</p>
+                  <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="exp-judiciary" type="text" inputmode="decimal" /></div>
+                </div>
+
+                <div class="govbb-form-group">
+                  <label class="govbb-label" for="exp-foreign-service">Foreign Service Officers allowance <span class="optional-badge">For foreign service officers only</span></label>
+                  <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="exp-foreign-service" type="text" inputmode="decimal" /></div>
+                </div>
+
+                <div class="govbb-form-group">
+                  <label class="govbb-label" for="exp-non-national">Deduction for specially qualified non-nationals <span class="optional-badge">For non-nationals only</span></label>
+                  <p class="govbb-hint">A deduction for specially qualified people who are not Barbadian nationals.</p>
+                  <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="exp-non-national" type="text" inputmode="decimal" /></div>
+                </div>
+
+              </div>
+            </details>
+
+          </section>
+
+          <div class="govbb-btn-group">
+            <button class="govbb-btn" type="submit">Continue</button>
+            <button class="save-link" type="button" onclick="window.location.href='file-return.html'">Save and come back later</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img class="govbb-footer__coat" src="assets/images/govbb-creast.svg" alt="Government of Barbados Coat of Arms" />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        function bindReveal(radioName, valueShown, revealId) {
+          var radios = document.querySelectorAll('input[name="' + radioName + '"]');
+          var reveal = document.getElementById(revealId);
+          function update() {
+            var picked = document.querySelector('input[name="' + radioName + '"]:checked');
+            if (picked && picked.value === valueShown) reveal.classList.add('reveal--shown');
+            else reveal.classList.remove('reveal--shown');
+          }
+          radios.forEach(function (r) { r.addEventListener('change', update); });
+          update();
+        }
+        bindReveal('employer-ok', 'no', 'correction-reveal');
+        bindReveal('other-pay', 'yes', 'other-reveal');
+      })();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About you &mdash; File your Personal Income Tax return for 2025 &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <link rel="stylesheet" href="assets/return-flow.css" />
+    <script src="assets/flow.js" defer></script>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest"><img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" /></div>
+          <div class="govbb-official-banner__text"><span>Official government website</span></div>
+        </div>
+      </div>
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+      <div class="govbb-status-banner govbb-status-banner--alpha" role="status" aria-label="alpha status banner" aria-live="polite">
+        <div class="govbb-container"><p>This page is in <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.</p></div>
+      </div>
+
+      <div class="govbb-container">
+        <form class="form-page" action="file-return-income-types.html" method="get" novalidate>
+
+          <a class="back-link" href="file-return.html">Back</a>
+
+          <div class="form-page__heading">
+            <span class="form-page__service-title govbb-text-body">File your Personal Income Tax return for 2025</span>
+            <p class="progress">Step 1 of 6</p>
+            <h1 class="govbb-text-display">About you</h1>
+            <p class="govbb-text-body">
+              These are the personal details BRA needs for your return. We&rsquo;ve filled in what we already know.
+            </p>
+          </div>
+
+          <!-- Identity (pre-filled) -->
+          <div class="data-card" aria-labelledby="who-heading">
+            <div class="data-card__head">
+              <h2 id="who-heading" class="govbb-text-h3" style="margin: 0;">Jane Smith</h2>
+              <span class="data-card__source">From your BRA account</span>
+            </div>
+            <dl class="data-card__rows">
+              <div class="data-card__row">
+                <dt>Taxpayer Identification Number (TIN)</dt>
+                <dd class="currency">100&#8209;005&#8209;8216&#8209;487</dd>
+              </div>
+              <div class="data-card__row">
+                <dt>Your age this year</dt>
+                <dd>29</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Section: Your job -->
+          <section class="field-group">
+            <h2 class="govbb-text-h2">Your job</h2>
+
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="profession">What is your job or profession?</label>
+              <p class="govbb-hint" id="profession-hint">Pick the closest match. If your job is not listed, choose &lsquo;Other&rsquo; and tell us what you do.</p>
+              <div class="govbb-input-wrapper">
+                <select class="govbb-input" id="profession" name="profession" aria-describedby="profession-hint">
+                  <option value="">Choose one</option>
+                  <option>Accountant</option>
+                  <option>Actuary</option>
+                  <option>Administrator</option>
+                  <option>Architect</option>
+                  <option>Civil servant</option>
+                  <option>Doctor / Medical practitioner</option>
+                  <option>Engineer</option>
+                  <option>Lawyer / Attorney-at-law</option>
+                  <option>Manager</option>
+                  <option>Teacher</option>
+                  <option>Pensioner</option>
+                  <option>Student</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="govbb-form-group" id="profession-other-wrap" style="display: none;">
+              <label class="govbb-label" for="profession-other">Tell us what you do</label>
+              <div class="govbb-input-wrapper">
+                <input class="govbb-input" id="profession-other" name="profession-other" type="text" />
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Relationship -->
+          <section class="field-group">
+            <h2 class="govbb-text-h2">Your relationship and family</h2>
+
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="marital">What is your relationship status?</label>
+              <div class="govbb-input-wrapper">
+                <select class="govbb-input" id="marital" name="marital">
+                  <option value="">Choose one</option>
+                  <option>Single</option>
+                  <option>Married</option>
+                  <option>Living with a partner (common-law)</option>
+                  <option>Separated</option>
+                  <option>Divorced</option>
+                  <option>Widowed</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="spouse-wrap" style="display: none;">
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="spouse-tin">Your spouse&rsquo;s Taxpayer Identification Number (TIN)</label>
+                <p class="govbb-hint" id="spouse-tin-hint">For example, 100&#8209;123&#8209;456&#8209;789.</p>
+                <div class="govbb-input-wrapper">
+                  <input class="govbb-input" id="spouse-tin" name="spouse-tin" type="text" aria-describedby="spouse-tin-hint" />
+                </div>
+              </div>
+
+              <div class="govbb-form-group">
+                <fieldset class="govbb-fieldset">
+                  <legend class="govbb-fieldset__legend">Do you want to claim the spouse allowance?</legend>
+                  <p class="govbb-hint">You can claim BDS$ 3,000 if your spouse earned no income (or only earned up to BDS$ 800 from dividends and interest) in 2025.</p>
+                  <div class="radio-options">
+                    <div class="radio-option">
+                      <input class="govbb-radio" id="claim-spouse-yes" type="radio" name="claim-spouse" value="yes" />
+                      <div class="radio-option__body">
+                        <label class="radio-option__label govbb-text-body" for="claim-spouse-yes">Yes</label>
+                      </div>
+                    </div>
+                    <div class="radio-option">
+                      <input class="govbb-radio" id="claim-spouse-no" type="radio" name="claim-spouse" value="no" />
+                      <div class="radio-option__body">
+                        <label class="radio-option__label govbb-text-body" for="claim-spouse-no">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="govbb-form-group">
+                <fieldset class="govbb-fieldset">
+                  <legend class="govbb-fieldset__legend">Has your spouse already filed their tax return for 2025?</legend>
+                  <p class="govbb-hint">This includes a Personal Income Tax return or a Reverse Tax Credit claim.</p>
+                  <div class="radio-options">
+                    <div class="radio-option">
+                      <input class="govbb-radio" id="spouse-filed-yes" type="radio" name="spouse-filed" value="yes" />
+                      <div class="radio-option__body">
+                        <label class="radio-option__label govbb-text-body" for="spouse-filed-yes">Yes</label>
+                      </div>
+                    </div>
+                    <div class="radio-option">
+                      <input class="govbb-radio" id="spouse-filed-no" type="radio" name="spouse-filed" value="no" />
+                      <div class="radio-option__body">
+                        <label class="radio-option__label govbb-text-body" for="spouse-filed-no">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Where you live -->
+          <section class="field-group">
+            <h2 class="govbb-text-h2">Where you live for tax</h2>
+
+            <div class="govbb-form-group">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend">Did you live in Barbados for most of 2025?</legend>
+                <p class="govbb-hint">This means someone who spent more than 182 days in Barbados during the year. If you&rsquo;re not sure, choose Yes if Barbados is your main home.</p>
+                <div class="radio-options">
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="resident-yes" type="radio" name="resident" value="yes" checked />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="resident-yes">Yes</label>
+                    </div>
+                  </div>
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="resident-no" type="radio" name="resident" value="no" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="resident-no">No</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="govbb-form-group" id="country-wrap" style="display: none;">
+              <label class="govbb-label" for="country">Which country do you live in?</label>
+              <div class="govbb-input-wrapper">
+                <select class="govbb-input" id="country" name="country">
+                  <option value="">Choose one</option>
+                  <option>Antigua and Barbuda</option>
+                  <option>Canada</option>
+                  <option>Dominica</option>
+                  <option>Grenada</option>
+                  <option>Guyana</option>
+                  <option>Jamaica</option>
+                  <option>Trinidad and Tobago</option>
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="govbb-form-group">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend">Are you filing this return for someone who died in 2025?</legend>
+                <div class="radio-options">
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="deceased-yes" type="radio" name="deceased" value="yes" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="deceased-yes">Yes</label>
+                    </div>
+                  </div>
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="deceased-no" type="radio" name="deceased" value="no" checked />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="deceased-no">No</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="govbb-form-group" id="date-of-death-wrap" style="display: none;">
+              <fieldset class="govbb-fieldset" aria-describedby="dod-hint">
+                <legend class="govbb-fieldset__legend">When did they die?</legend>
+                <p class="govbb-hint" id="dod-hint">For example, 27 3 2025.</p>
+                <div style="display: flex; gap: var(--spacing-s); flex-wrap: wrap;">
+                  <div>
+                    <label class="govbb-label" for="dod-day" style="display: block; font-size: var(--font-size-caption);">Day</label>
+                    <div class="govbb-input-wrapper" style="max-width: 5rem;">
+                      <input class="govbb-input" id="dod-day" name="dod-day" type="text" inputmode="numeric" maxlength="2" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="govbb-label" for="dod-month" style="display: block; font-size: var(--font-size-caption);">Month</label>
+                    <div class="govbb-input-wrapper" style="max-width: 5rem;">
+                      <input class="govbb-input" id="dod-month" name="dod-month" type="text" inputmode="numeric" maxlength="2" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="govbb-label" for="dod-year" style="display: block; font-size: var(--font-size-caption);">Year</label>
+                    <div class="govbb-input-wrapper" style="max-width: 7rem;">
+                      <input class="govbb-input" id="dod-year" name="dod-year" type="text" inputmode="numeric" maxlength="4" />
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </section>
+
+          <!-- Section: Other tax situations -->
+          <section class="field-group">
+            <h2 class="govbb-text-h2">Other tax situations</h2>
+            <p class="govbb-text-body">Tell us if any of these apply to you. We&rsquo;ll ask follow-up questions later if you say yes.</p>
+
+            <div class="govbb-form-group">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend">Did you work for yourself in 2025?</legend>
+                <p class="govbb-hint">This means freelance work, a small business you run, or any income that wasn&rsquo;t paid through PAYE.</p>
+                <div class="radio-options">
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="self-yes" type="radio" name="self-employed" value="yes" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="self-yes">Yes</label>
+                    </div>
+                  </div>
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="self-no" type="radio" name="self-employed" value="no" checked />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="self-no">No</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="govbb-form-group">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend">Were you a director of a company in 2025?</legend>
+                <div class="radio-options">
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="director-yes" type="radio" name="director" value="yes" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="director-yes">Yes</label>
+                    </div>
+                  </div>
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="director-no" type="radio" name="director" value="no" checked />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="director-no">No</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="govbb-form-group">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend">Are you filing this return for a Trust?</legend>
+                <p class="govbb-hint">A Trust is a legal arrangement that holds assets for someone else.</p>
+                <div class="radio-options">
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="trust-yes" type="radio" name="trust" value="yes" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="trust-yes">Yes</label>
+                    </div>
+                  </div>
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="trust-no" type="radio" name="trust" value="no" checked />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="trust-no">No</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </section>
+
+          <!-- Section: Land Tax (optional) -->
+          <section class="field-group">
+            <h2 class="govbb-text-h2">Land Tax <span class="optional-badge">Optional</span></h2>
+            <p class="govbb-text-body">If you own property in Barbados, you can link your Land Tax bills to this return. We&rsquo;ll use them to check for any allowances you can claim.</p>
+
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="land-tax">Land Tax bill reference numbers</label>
+              <p class="govbb-hint" id="land-tax-hint">Separate more than one reference with a comma.</p>
+              <div class="govbb-input-wrapper">
+                <input class="govbb-input" id="land-tax" name="land-tax" type="text" aria-describedby="land-tax-hint" />
+              </div>
+            </div>
+          </section>
+
+          <div class="govbb-btn-group">
+            <button class="govbb-btn" type="submit">Continue</button>
+            <button class="save-link" type="button" onclick="window.location.href='file-return.html'">Save and come back later</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img class="govbb-footer__coat" src="assets/images/govbb-creast.svg" alt="Government of Barbados Coat of Arms" />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Conditional reveals
+      (function () {
+        function toggle(el, show) { el.style.display = show ? 'block' : 'none'; }
+
+        var profession = document.getElementById('profession');
+        var professionOther = document.getElementById('profession-other-wrap');
+        profession.addEventListener('change', function () {
+          toggle(professionOther, profession.value === 'Other');
+        });
+
+        var marital = document.getElementById('marital');
+        var spouseWrap = document.getElementById('spouse-wrap');
+        marital.addEventListener('change', function () {
+          var isMarried = marital.value === 'Married' || marital.value === 'Living with a partner (common-law)';
+          toggle(spouseWrap, isMarried);
+        });
+
+        var residentRadios = document.querySelectorAll('input[name="resident"]');
+        var countryWrap = document.getElementById('country-wrap');
+        residentRadios.forEach(function (r) {
+          r.addEventListener('change', function () {
+            toggle(countryWrap, document.getElementById('resident-no').checked);
+          });
+        });
+
+        var deceasedRadios = document.querySelectorAll('input[name="deceased"]');
+        var dodWrap = document.getElementById('date-of-death-wrap');
+        deceasedRadios.forEach(function (r) {
+          r.addEventListener('change', function () {
+            toggle(dodWrap, document.getElementById('deceased-yes').checked);
+          });
+        });
+      })();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check your answers before sending &mdash; File your Personal Income Tax return for 2025 &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <link rel="stylesheet" href="assets/return-flow.css" />
+    <style>
+      .calc {
+        background: var(--color-blue-10);
+        border: 2px solid var(--color-blue-40);
+        padding: var(--spacing-s) var(--spacing-xm);
+      }
+      .calc__row {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--spacing-s);
+        padding-block: var(--spacing-xxs);
+      }
+      .calc__row dt { margin: 0; color: var(--color-mid-grey-00); }
+      .calc__row dd { margin: 0; font-weight: var(--font-weight-bold); }
+      .calc__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--spacing-s);
+        padding-top: var(--spacing-s);
+        margin-top: var(--spacing-s);
+        border-top: 4px solid var(--color-blue-100);
+        font-size: var(--font-size-h3);
+        font-weight: var(--font-weight-bold);
+      }
+      .calc__total--refund { color: var(--color-green-00); }
+      .calc__total dt, .calc__total dd { margin: 0; }
+
+      .declaration {
+        background: var(--color-yellow-10);
+        border-left: 4px solid var(--color-yellow-100);
+        padding: var(--spacing-s) var(--spacing-xm);
+      }
+      .declaration label {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-s);
+        margin-top: var(--spacing-s);
+        font-weight: var(--font-weight-bold);
+        cursor: pointer;
+      }
+    </style>
+    <script src="assets/flow.js" defer></script>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest"><img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" /></div>
+          <div class="govbb-official-banner__text"><span>Official government website</span></div>
+        </div>
+      </div>
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+      <div class="govbb-status-banner govbb-status-banner--alpha" role="status" aria-label="alpha status banner" aria-live="polite">
+        <div class="govbb-container"><p>This page is in <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.</p></div>
+      </div>
+
+      <div class="govbb-container">
+        <form class="form-page" action="file-return-confirmation.html" method="get" novalidate>
+
+          <a class="back-link" href="file-return-documents.html">Back</a>
+
+          <div class="form-page__heading">
+            <span class="form-page__service-title govbb-text-body">File your Personal Income Tax return for 2025</span>
+            <p class="progress">Step 6 of 6</p>
+            <h1 class="govbb-text-display">Check your answers before sending</h1>
+            <p class="govbb-text-body">
+              Make sure everything is correct. You can change any answer before you send your return to BRA.
+            </p>
+          </div>
+
+          <section>
+            <h2 class="govbb-text-h2">About you</h2>
+            <dl class="summary">
+              <div class="summary__row">
+                <dt class="summary__key">Name</dt>
+                <dd class="summary__value">Jane Smith</dd>
+                <dd class="summary__action"></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Taxpayer Identification Number (TIN)</dt>
+                <dd class="summary__value currency">100&#8209;005&#8209;8216&#8209;487</dd>
+                <dd class="summary__action"></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Job</dt>
+                <dd class="summary__value">Actuary</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-about.html">Change <span class="govbb-visually-hidden">job</span></a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Relationship status</dt>
+                <dd class="summary__value">Single</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-about.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Lived in Barbados most of 2025</dt>
+                <dd class="summary__value">Yes</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-about.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Self-employed</dt>
+                <dd class="summary__value">No</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-about.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Company director</dt>
+                <dd class="summary__value">No</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-about.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Filing for a Trust</dt>
+                <dd class="summary__value">No</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-about.html">Change</a></dd>
+              </div>
+            </dl>
+          </section>
+
+          <section>
+            <h2 class="govbb-text-h2">Income</h2>
+            <dl class="summary">
+              <div class="summary__row">
+                <dt class="summary__key">Pay from Goddard Enterprises Ltd.</dt>
+                <dd class="summary__value currency">BDS$ 75,000.00</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-employment.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">PAYE tax already paid</dt>
+                <dd class="summary__value currency">BDS$ 11,200.00</dd>
+                <dd class="summary__action"></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Employment allowances claimed</dt>
+                <dd class="summary__value">None</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-employment.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Pension income</dt>
+                <dd class="summary__value">None declared</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-pension.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Investment income (Barbados)</dt>
+                <dd class="summary__value">None declared</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-investments.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Investment income (overseas)</dt>
+                <dd class="summary__value">None declared</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-investments.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Business or self-employment income</dt>
+                <dd class="summary__value">Not applicable</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-business.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Farming and fishing income</dt>
+                <dd class="summary__value">Not applicable</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-agriculture.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Cultural project income</dt>
+                <dd class="summary__value">Not applicable</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-cultural.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Rent from a home you own</dt>
+                <dd class="summary__value">None declared</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-rental.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Renewable energy investments</dt>
+                <dd class="summary__value">None</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-energy.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Foreign currency earnings rebate</dt>
+                <dd class="summary__value">Not claimed</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-foreign-currency.html">Change</a></dd>
+              </div>
+            </dl>
+          </section>
+
+          <section>
+            <h2 class="govbb-text-h2">Allowances and deductions</h2>
+            <dl class="summary">
+              <div class="summary__row">
+                <dt class="summary__key">Personal allowance</dt>
+                <dd class="summary__value currency">BDS$ 25,000.00</dd>
+                <dd class="summary__action"></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">NIS contributions</dt>
+                <dd class="summary__value currency">BDS$ 8,250.00</dd>
+                <dd class="summary__action"></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Other allowances claimed</dt>
+                <dd class="summary__value">None</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-allowances.html">Change</a></dd>
+              </div>
+            </dl>
+          </section>
+
+          <section>
+            <h2 class="govbb-text-h2">Refund</h2>
+            <dl class="summary">
+              <div class="summary__row">
+                <dt class="summary__key">How you want to be paid</dt>
+                <dd class="summary__value">Direct deposit</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-refund-method.html">Change</a></dd>
+              </div>
+              <div class="summary__row">
+                <dt class="summary__key">Account</dt>
+                <dd class="summary__value">RBC Royal Bank &mdash; ending 4321</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-refund-method.html">Change</a></dd>
+              </div>
+            </dl>
+          </section>
+
+          <section>
+            <h2 class="govbb-text-h2">Supporting documents</h2>
+            <dl class="summary">
+              <div class="summary__row">
+                <dt class="summary__key">Files attached</dt>
+                <dd class="summary__value">P14-2025.pdf</dd>
+                <dd class="summary__action"><a class="govbb-link" href="file-return-documents.html">Change</a></dd>
+              </div>
+            </dl>
+          </section>
+
+          <!-- Calculation -->
+          <section>
+            <h2 class="govbb-text-h2">What this means</h2>
+            <p class="govbb-text-body">Based on your answers, here is how your tax for 2025 works out:</p>
+            <dl class="calc">
+              <div class="calc__row">
+                <dt>Total income</dt>
+                <dd class="currency">BDS$ 75,000.00</dd>
+              </div>
+              <div class="calc__row">
+                <dt>Personal allowance</dt>
+                <dd class="currency">&minus; BDS$ 25,000.00</dd>
+              </div>
+              <div class="calc__row">
+                <dt>NIS contributions</dt>
+                <dd class="currency">&minus; BDS$ 8,250.00</dd>
+              </div>
+              <div class="calc__row">
+                <dt>Other deductions</dt>
+                <dd class="currency">&minus; BDS$ 0.00</dd>
+              </div>
+              <div class="calc__row">
+                <dt>Taxable income</dt>
+                <dd class="currency">BDS$ 41,750.00</dd>
+              </div>
+              <div class="calc__row">
+                <dt>Income tax due</dt>
+                <dd class="currency">BDS$ 10,850.00</dd>
+              </div>
+              <div class="calc__row">
+                <dt>PAYE tax already paid</dt>
+                <dd class="currency">&minus; BDS$ 11,200.00</dd>
+              </div>
+              <div class="calc__total calc__total--refund">
+                <dt>You are owed a refund of</dt>
+                <dd class="currency">BDS$ 350.00</dd>
+              </div>
+            </dl>
+            <p class="govbb-text-body" style="margin-top: var(--spacing-s);">
+              <a class="govbb-link" href="#">See how this was calculated</a>
+            </p>
+          </section>
+
+          <!-- Declaration -->
+          <div class="declaration">
+            <h2 class="govbb-text-h3">Declaration</h2>
+            <p class="govbb-text-body">
+              By sending this return you confirm that, to the best of your knowledge, the information you&rsquo;ve given is true and correct. Giving false information can lead to a penalty or prosecution.
+            </p>
+            <label for="confirm-true">
+              <input class="govbb-checkbox" id="confirm-true" type="checkbox" required />
+              <span>I confirm the information in this return is true and correct.</span>
+            </label>
+          </div>
+
+          <div class="govbb-btn-group">
+            <button class="govbb-btn" type="submit">Accept and send return</button>
+            <button class="save-link" type="button" onclick="window.location.href='file-return.html'">Save and come back later</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img class="govbb-footer__coat" src="assets/images/govbb-creast.svg" alt="Government of Barbados Coat of Arms" />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

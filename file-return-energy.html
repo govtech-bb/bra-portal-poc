@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renewable energy investments &mdash; File your Personal Income Tax return for 2025 &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <link rel="stylesheet" href="assets/return-flow.css" />
+    <script src="assets/flow.js" defer></script>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest"><img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" /></div>
+          <div class="govbb-official-banner__text"><span>Official government website</span></div>
+        </div>
+      </div>
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+      <div class="govbb-status-banner govbb-status-banner--alpha" role="status" aria-label="alpha status banner" aria-live="polite">
+        <div class="govbb-container"><p>This page is in <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.</p></div>
+      </div>
+
+      <div class="govbb-container">
+        <form class="form-page" action="file-return-rental.html" method="get" novalidate>
+
+          <a class="back-link" href="file-return-cultural.html">Back</a>
+
+          <div class="form-page__heading">
+            <span class="form-page__service-title govbb-text-body">File your Personal Income Tax return for 2025</span>
+            <p class="progress">Step 3 of 6 &mdash; Your income</p>
+            <h1 class="govbb-text-display">Did you invest in renewable energy in 2025?</h1>
+            <p class="govbb-text-body">
+              You may be able to claim a deduction for the cost of installing solar, wind or other renewable energy systems, or for an energy audit on your home or business.
+            </p>
+          </div>
+
+          <div class="govbb-form-group">
+            <fieldset class="govbb-fieldset">
+              <legend class="govbb-fieldset__legend">Did you invest in renewable energy or an energy audit for your home?</legend>
+              <p class="govbb-hint">For example, installing solar panels, a solar water heater, or an electrical retrofit.</p>
+              <div class="radio-options">
+                <div class="radio-option">
+                  <input class="govbb-radio" id="home-no" type="radio" name="home-energy" value="no" checked />
+                  <div class="radio-option__body"><label class="radio-option__label govbb-text-body" for="home-no">No</label></div>
+                </div>
+                <div class="radio-option">
+                  <input class="govbb-radio" id="home-yes" type="radio" name="home-energy" value="yes" />
+                  <div class="radio-option__body"><label class="radio-option__label govbb-text-body" for="home-yes">Yes</label></div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="reveal" id="home-reveal">
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="home-amount">How much did you spend?</label>
+              <p class="govbb-hint">Enter the total cost in BDS$. You can claim up to 150% of the cost over the next few years.</p>
+              <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="home-amount" type="text" inputmode="decimal" /></div>
+            </div>
+          </div>
+
+          <div class="govbb-form-group">
+            <fieldset class="govbb-fieldset">
+              <legend class="govbb-fieldset__legend">Did you invest in renewable energy for your business?</legend>
+              <p class="govbb-hint">Only choose Yes if you run a small business and made the investment for the business.</p>
+              <div class="radio-options">
+                <div class="radio-option">
+                  <input class="govbb-radio" id="biz-no" type="radio" name="biz-energy" value="no" checked />
+                  <div class="radio-option__body"><label class="radio-option__label govbb-text-body" for="biz-no">No</label></div>
+                </div>
+                <div class="radio-option">
+                  <input class="govbb-radio" id="biz-yes" type="radio" name="biz-energy" value="yes" />
+                  <div class="radio-option__body"><label class="radio-option__label govbb-text-body" for="biz-yes">Yes</label></div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="reveal" id="biz-reveal">
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="biz-amount">How much did you spend?</label>
+              <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="biz-amount" type="text" inputmode="decimal" /></div>
+            </div>
+          </div>
+
+          <div class="govbb-btn-group">
+            <button class="govbb-btn" type="submit">Continue</button>
+            <button class="save-link" type="button" onclick="window.location.href='file-return.html'">Save and come back later</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img class="govbb-footer__coat" src="assets/images/govbb-creast.svg" alt="Government of Barbados Coat of Arms" />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        function bind(name, valueShown, revealId) {
+          var radios = document.querySelectorAll('input[name="' + name + '"]');
+          var reveal = document.getElementById(revealId);
+          function update() {
+            var picked = document.querySelector('input[name="' + name + '"]:checked');
+            if (picked && picked.value === valueShown) reveal.classList.add('reveal--shown');
+            else reveal.classList.remove('reveal--shown');
+          }
+          radios.forEach(function (r) { r.addEventListener('change', update); });
+          update();
+        }
+        bind('home-energy', 'yes', 'home-reveal');
+        bind('biz-energy', 'yes', 'biz-reveal');
+      })();
+    </script>
+
+  </body>
+</html>

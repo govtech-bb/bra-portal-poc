@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account home &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <style>
+      /* Account-area chrome (no template for logged-in pages yet — built from design tokens). */
+      .account-nav {
+        background: var(--color-yellow-10);
+        border-bottom: 2px solid var(--color-yellow-100);
+      }
+      .account-nav__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+      }
+      .account-nav__link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        padding: var(--spacing-s) var(--spacing-xm);
+        color: var(--color-link);
+        text-decoration: underline;
+        font-weight: var(--font-weight-bold);
+        border-bottom: 4px solid transparent;
+        margin-bottom: -2px;
+        @apply govbb-font-body;
+      }
+      .account-nav__link[aria-current="page"] {
+        color: var(--color-text);
+        text-decoration: none;
+        border-bottom-color: var(--color-blue-100);
+      }
+      .account-nav__link:hover { background: var(--color-link-hover-bg); }
+      .account-nav__badge {
+        display: inline-block;
+        background: var(--color-red-00);
+        color: var(--color-white-00);
+        font-size: var(--font-size-caption-sm);
+        font-weight: var(--font-weight-bold);
+        padding: 0.125rem 0.5rem;
+        border-radius: 999px;
+        line-height: 1.2;
+      }
+      .account-nav__spacer { margin-left: auto; }
+
+      /* Notice block (mirrors the "your account has been updated" callout) */
+      .notice {
+        border: 2px solid var(--color-blue-100);
+        max-width: 40rem;
+        margin-bottom: var(--spacing-m);
+      }
+      .notice__head {
+        background: var(--color-blue-100);
+        color: var(--color-white-00);
+        padding: var(--spacing-xs) var(--spacing-s);
+        font-weight: var(--font-weight-bold);
+      }
+      .notice__body {
+        padding: var(--spacing-s);
+      }
+      .notice__body p { margin: 0; }
+
+      /* Page layout */
+      .account-page {
+        padding-block: var(--spacing-m);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-m);
+      }
+      .account-page__caption {
+        color: var(--color-text-muted);
+        margin: 0;
+      }
+      .account-page__title {
+        margin: 0;
+      }
+      .identity {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+      }
+      .identity__tin {
+        margin: 0;
+      }
+      .identity__tin code {
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: var(--font-size-h4);
+        font-weight: var(--font-weight-bold);
+        background: var(--color-yellow-10);
+        padding: 0.125rem 0.5rem;
+        border-radius: var(--radius-sm, 4px);
+      }
+
+      .section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-s);
+      }
+      .section + .section { margin-top: var(--spacing-m); }
+      .section__heading { margin: 0; }
+      .section__subheading {
+        margin: var(--spacing-s) 0 0 0;
+        color: var(--color-text-muted);
+      }
+
+      /* Service list using the home-services pattern */
+      .services {
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid var(--color-grey-00);
+        border-bottom: 2px solid var(--color-grey-00);
+      }
+      .services__item {
+        padding-block: var(--spacing-s);
+        border-top: 2px solid var(--color-grey-00);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+      }
+      .services__item:first-child { border-top: 0; }
+      @media (width >= 1024px) {
+        .services__item { padding-block: var(--spacing-xm); }
+      }
+      .services__title {
+        font-size: var(--font-size-h4);
+        font-weight: var(--font-weight-bold);
+      }
+      .services__desc {
+        margin: 0;
+        color: var(--color-text-muted);
+      }
+      .services__meta {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        flex-wrap: wrap;
+      }
+
+      /* Status pills */
+      .pill {
+        display: inline-block;
+        font-size: var(--font-size-caption-sm);
+        font-weight: var(--font-weight-bold);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 0.125rem 0.5rem;
+        border-radius: var(--radius-sm, 4px);
+        color: var(--color-white-00);
+      }
+      .pill--due  { background: var(--color-red-00); }
+      .pill--paid { background: var(--color-green-00); }
+      .pill--info { background: var(--color-teal-00); }
+
+      /* Two-column grid on wider viewports */
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-m);
+      }
+      @media (width >= 1024px) {
+        .layout { grid-template-columns: 2fr 1fr; }
+      }
+      .aside {
+        background: var(--color-grey-00);
+        padding: var(--spacing-s);
+        align-self: start;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-s);
+      }
+      .aside h2 { margin: 0; }
+      .aside ul { margin: 0; padding-left: var(--spacing-xm); display: flex; flex-direction: column; gap: var(--spacing-xs); }
+
+      /* News list */
+      .news {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+        border: 4px solid var(--color-yellow-100);
+        background: var(--color-yellow-40);
+        padding: var(--spacing-xm) var(--spacing-s);
+      }
+      .news ul {
+        margin: 0;
+        padding-left: var(--spacing-xm);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+      }
+    </style>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest">
+            <img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" />
+          </div>
+          <div class="govbb-official-banner__text">
+            <span>Official government website</span>
+          </div>
+        </div>
+      </div>
+
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+
+      <div
+        class="govbb-status-banner govbb-status-banner--alpha"
+        role="status"
+        aria-label="alpha status banner"
+        aria-live="polite"
+      >
+        <div class="govbb-container">
+          <p>
+            This page is in
+            <a class="govbb-link govbb-link--secondary" href="/what-we-mean-by-alpha">Alpha</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Secondary account nav -->
+      <nav class="account-nav" aria-label="Your account">
+        <div class="govbb-container account-nav__inner">
+          <a class="account-nav__link" href="dashboard.html" aria-current="page">Account home</a>
+          <a class="account-nav__link" href="#">
+            Messages
+            <span class="account-nav__badge" aria-label="3 unread">3</span>
+          </a>
+          <a class="account-nav__link" href="#">Check progress</a>
+          <a class="account-nav__link" href="#">Profile and settings</a>
+          <a class="account-nav__link account-nav__spacer" href="index.html">Sign out</a>
+        </div>
+      </nav>
+
+      <div class="govbb-container account-page">
+
+        <!-- Update notice -->
+        <div class="notice" role="region" aria-label="Important update">
+          <div class="notice__head">Important</div>
+          <div class="notice__body">
+            <p>Your BRA account home has been updated. <a class="govbb-link" href="#">Find out what&rsquo;s changed</a>.</p>
+          </div>
+        </div>
+
+        <!-- Identity block -->
+        <div>
+          <p class="account-page__caption govbb-text-body">Account home</p>
+          <h1 class="account-page__title govbb-text-display">Jane Smith</h1>
+        </div>
+
+        <div class="identity">
+          <p class="identity__tin govbb-text-body">
+            Your Taxpayer Identification Number (TIN) is <code>100-005-8216-487</code>
+          </p>
+          <p class="govbb-text-body" style="margin: 0;">
+            <a class="govbb-link" href="#">View and save your National Registration Number</a>
+          </p>
+        </div>
+
+        <div class="layout">
+
+          <div>
+
+            <!-- Current services -->
+            <section class="section" aria-labelledby="current-services">
+              <h2 id="current-services" class="section__heading govbb-text-h2">Your taxes and services</h2>
+              <p class="section__subheading govbb-text-body">Your current BRA online services</p>
+
+              <ul class="govbb-list services">
+                <li class="services__item">
+                  <a class="govbb-link services__title" href="#">Pay As You Earn (PAYE)</a>
+                  <p class="services__desc">See what your employer has deducted this year and download your statement.</p>
+                </li>
+                <li class="services__item">
+                  <a class="govbb-link services__title" href="file-return.html">Personal Income Tax return &mdash; 2025</a>
+                  <div class="services__meta">
+                    <span class="pill pill--due">Due by 30 April 2026</span>
+                    <span class="govbb-text-body" style="color: var(--color-text-muted);">File your return in about 10 minutes</span>
+                  </div>
+                </li>
+                <li class="services__item">
+                  <a class="govbb-link services__title" href="#">Value Added Tax (VAT)</a>
+                  <p class="services__desc">File a return, pay a bill, or update your VAT details.</p>
+                </li>
+                <li class="services__item">
+                  <a class="govbb-link services__title" href="#">Property and Land Tax</a>
+                  <div class="services__meta">
+                    <span class="pill pill--paid">Paid</span>
+                    <span class="govbb-text-body" style="color: var(--color-text-muted);">View your bill and payment history</span>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Other services -->
+            <section class="section" aria-labelledby="other-services">
+              <h2 id="other-services" class="section__heading govbb-text-h3">Other services that may be relevant to you</h2>
+              <ul class="govbb-list services">
+                <li class="services__item">
+                  <a class="govbb-link services__title" href="#">Annual tax summary</a>
+                  <p class="services__desc">A simple summary of the tax you paid this year and how it was spent.</p>
+                </li>
+                <li class="services__item">
+                  <a class="govbb-link services__title" href="#">Trusted helpers</a>
+                  <p class="services__desc">Let a family member or friend manage your tax on your behalf.</p>
+                </li>
+                <li class="services__item">
+                  <a class="govbb-link services__title" href="#">Update your personal details</a>
+                  <p class="services__desc">Change your address, phone number, or bank details.</p>
+                </li>
+                <li class="services__item">
+                  <a class="govbb-link services__title" href="#">National Insurance and Pensions (NIS)</a>
+                  <p class="services__desc">Check your contributions and pension entitlement.</p>
+                </li>
+              </ul>
+            </section>
+
+            <!-- News -->
+            <section class="section" aria-labelledby="bra-news">
+              <h2 id="bra-news" class="section__heading govbb-text-h3">BRA news</h2>
+              <div class="news">
+                <ul>
+                  <li><a class="govbb-link govbb-link--secondary" href="#">Changes to the BRA account home</a></li>
+                  <li><a class="govbb-link govbb-link--secondary" href="#">Check your personal details are up to date</a></li>
+                  <li><a class="govbb-link govbb-link--secondary" href="#">Pay your tax bills through SurePay or online banking</a></li>
+                </ul>
+              </div>
+            </section>
+
+          </div>
+
+          <aside class="aside" aria-label="Quick links">
+            <div>
+              <h2 class="govbb-text-h4">Quick links</h2>
+              <ul>
+                <li><a class="govbb-link" href="#">Make a payment</a></li>
+                <li><a class="govbb-link" href="#">Check refund status</a></li>
+                <li><a class="govbb-link" href="#">Download a tax certificate</a></li>
+                <li><a class="govbb-link" href="#">Contact BRA</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="govbb-text-h4">Open in TAMIS</h2>
+              <p class="govbb-text-body" style="margin: 0 0 var(--spacing-s) 0;">For advanced filing features, open your account in TAMIS.</p>
+              <a class="govbb-btn govbb-btn--secondary" href="https://tamis.bra.gov.bb/" target="_blank" rel="noopener">Open TAMIS</a>
+            </div>
+          </aside>
+
+        </div>
+
+        <p class="govbb-text-body" style="margin: var(--spacing-m) 0 0 0;">
+          <a class="govbb-link" href="#">Is this page not working properly? (opens in new tab)</a>
+        </p>
+
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="/">Home</a>
+          <a class="govbb-footer__link" href="/terms-conditions">Terms &amp; Conditions</a>
+          <a class="govbb-footer__link" href="/privacy">Privacy</a>
+          <a class="govbb-footer__link" href="/cookie-policy">Cookie Policy</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img
+            class="govbb-footer__coat"
+            src="assets/images/govbb-creast.svg"
+            alt="Government of Barbados Coat of Arms"
+          />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

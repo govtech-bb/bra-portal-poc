@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in to BRA &mdash; Sign in to BRA online services &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <style>
+      .form-page {
+        padding-block: var(--spacing-l);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xm);
+      }
+      @media (width >= 1024px) {
+        .form-page { gap: var(--spacing-m); }
+      }
+      .form-page__service-title {
+        display: inline-flex;
+        align-items: center;
+        padding: var(--spacing-xs) var(--spacing-s);
+        border-left: var(--spacing-xxs) solid var(--color-blue-40);
+        color: var(--color-mid-grey-00);
+      }
+      .form-page__heading {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-s);
+      }
+      /* Back link */
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-xxs);
+        color: var(--color-link);
+        text-decoration: underline;
+        font-weight: var(--font-weight-bold);
+      }
+      .back-link::before {
+        content: "";
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-left: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg);
+        margin-right: var(--spacing-xxs);
+      }
+      /* Radio item with hint */
+      .radio-options {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-s);
+      }
+      .radio-option {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-s);
+      }
+      .radio-option__body {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xxs);
+        flex: 1;
+      }
+      .radio-option__label {
+        font-weight: var(--font-weight-bold);
+        cursor: pointer;
+      }
+      .radio-option__hint {
+        margin: 0;
+        color: var(--color-mid-grey-00);
+      }
+      .radio-divider {
+        display: flex;
+        align-items: center;
+        color: var(--color-mid-grey-00);
+        font-weight: var(--font-weight-bold);
+        margin-block: var(--spacing-xs);
+      }
+      .radio-divider::before,
+      .radio-divider::after {
+        content: "";
+        flex: 1;
+        border-top: 1px solid var(--color-grey-00);
+      }
+      .radio-divider::before { margin-right: var(--spacing-s); }
+      .radio-divider::after { margin-left: var(--spacing-s); }
+
+      .problem-link {
+        margin-top: var(--spacing-m);
+        @apply govbb-text-body;
+      }
+    </style>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest">
+            <img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" />
+          </div>
+          <div class="govbb-official-banner__text">
+            <span>Official government website</span>
+          </div>
+        </div>
+      </div>
+
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+
+      <div
+        class="govbb-status-banner govbb-status-banner--alpha"
+        role="status"
+        aria-label="alpha status banner"
+        aria-live="polite"
+      >
+        <div class="govbb-container">
+          <p>
+            This page is in
+            <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="govbb-container">
+        <form class="form-page" id="signinForm" novalidate>
+
+          <a class="back-link" href="index.html">Back</a>
+
+          <div class="form-page__heading">
+            <span class="form-page__service-title govbb-text-body">Sign in to BRA online services</span>
+            <h1 class="govbb-text-display">Sign in to BRA</h1>
+          </div>
+
+          <div class="govbb-form-group">
+            <fieldset class="govbb-fieldset">
+              <legend class="govbb-fieldset__legend govbb-visually-hidden">How would you like to sign in?</legend>
+
+              <div class="radio-options">
+
+                <!-- Option 1: TAMIS account -->
+                <div class="radio-option">
+                  <input
+                    class="govbb-radio"
+                    id="method-tamis"
+                    type="radio"
+                    name="method"
+                    value="tamis"
+                    checked
+                  />
+                  <div class="radio-option__body">
+                    <label class="radio-option__label govbb-text-body" for="method-tamis">TAMIS account</label>
+                    <p class="radio-option__hint govbb-text-body">
+                      Use your Taxpayer Identification Number (TIN) and password
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Option 2: Trident ID -->
+                <div class="radio-option">
+                  <input
+                    class="govbb-radio"
+                    id="method-trident"
+                    type="radio"
+                    name="method"
+                    value="trident"
+                  />
+                  <div class="radio-option__body">
+                    <label class="radio-option__label govbb-text-body" for="method-trident">Trident ID</label>
+                    <p class="radio-option__hint govbb-text-body">
+                      Use your Trident ID if you have used this to sign in to BRA before
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="radio-divider" aria-hidden="true">or</div>
+
+                <!-- Option 3: Create new -->
+                <div class="radio-option">
+                  <input
+                    class="govbb-radio"
+                    id="method-create"
+                    type="radio"
+                    name="method"
+                    value="create"
+                  />
+                  <div class="radio-option__body">
+                    <label class="radio-option__label govbb-text-body" for="method-create">Create new sign in details</label>
+                    <p class="radio-option__hint govbb-text-body">
+                      We will tell you if you need to create a TAMIS account or a Trident ID
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govbb-btn-group">
+            <button class="govbb-btn" type="submit">Continue</button>
+          </div>
+
+          <p class="problem-link">
+            <a class="govbb-link" href="#">Is this page not working properly? (opens in new tab)</a>
+          </p>
+
+        </form>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Accessibility statement</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+          <a class="govbb-footer__link" href="#">Help using alpha.gov.bb</a>
+          <a class="govbb-footer__link" href="#">Contact</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img
+            class="govbb-footer__coat"
+            src="assets/images/govbb-creast.svg"
+            alt="Government of Barbados Coat of Arms"
+          />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // POC routing: send the user to the right credentials page based on chosen method.
+      document.getElementById('signinForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var picked = document.querySelector('input[name="method"]:checked');
+        if (!picked) return;
+        switch (picked.value) {
+          case 'tamis':   window.location.href = 'sign-in-tamis.html'; break;
+          case 'trident': window.location.href = 'sign-in-trident.html'; break;
+          case 'create':  window.location.href = 'create-account.html'; break;
+        }
+      });
+    </script>
+
+  </body>
+</html>

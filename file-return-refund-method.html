@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How do you want to be paid? &mdash; File your Personal Income Tax return for 2025 &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <link rel="stylesheet" href="assets/return-flow.css" />
+    <script src="assets/flow.js" defer></script>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest"><img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" /></div>
+          <div class="govbb-official-banner__text"><span>Official government website</span></div>
+        </div>
+      </div>
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+      <div class="govbb-status-banner govbb-status-banner--alpha" role="status" aria-label="alpha status banner" aria-live="polite">
+        <div class="govbb-container"><p>This page is in <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.</p></div>
+      </div>
+
+      <div class="govbb-container">
+        <form class="form-page" action="file-return-documents.html" method="get" novalidate>
+
+          <a class="back-link" href="file-return-allowances.html">Back</a>
+
+          <div class="form-page__heading">
+            <span class="form-page__service-title govbb-text-body">File your Personal Income Tax return for 2025</span>
+            <p class="progress">Step 5 of 6</p>
+            <h1 class="govbb-text-display">How do you want to be paid your refund?</h1>
+            <p class="govbb-text-body">
+              Based on what you&rsquo;ve told us, you&rsquo;re owed a refund. Choose how you&rsquo;d like to receive it.
+            </p>
+          </div>
+
+          <div class="callout callout--success">
+            <h2 class="govbb-text-h2">Your estimated refund</h2>
+            <p class="govbb-text-body" style="font-size: var(--font-size-h3); font-weight: var(--font-weight-bold);">BDS$ 350.00</p>
+            <p class="govbb-text-body">This is an estimate based on your answers. BRA will confirm the final amount.</p>
+          </div>
+
+          <section class="section">
+            <h2 class="govbb-text-h2">How would you like to receive it?</h2>
+
+            <div class="govbb-form-group">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend govbb-visually-hidden">Refund method</legend>
+                <div class="radio-options">
+
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="m-direct" type="radio" name="method" value="direct" checked />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="m-direct">Direct deposit to your bank account <span class="preset-badge">Fastest</span></label>
+                      <p class="radio-option__hint govbb-text-body">We&rsquo;ll pay your refund into your bank account within 14 working days.</p>
+                    </div>
+                  </div>
+
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="m-cheque" type="radio" name="method" value="cheque" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="m-cheque">Cheque sent in the post</label>
+                      <p class="radio-option__hint govbb-text-body">We&rsquo;ll post a cheque to the address on your account. This usually takes 4 to 6 weeks.</p>
+                    </div>
+                  </div>
+
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="m-certificates" type="radio" name="method" value="certificates" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="m-certificates">Tax refund certificates</label>
+                      <p class="radio-option__hint govbb-text-body">Certificates you can use against future tax bills, or transfer to a family member who is also a BRA taxpayer.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- Direct deposit details -->
+            <div class="reveal reveal--shown" id="direct-reveal">
+              <h3 class="govbb-text-h3">Your bank details</h3>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="bank-name">Bank</label>
+                <div class="govbb-input-wrapper">
+                  <select class="govbb-input" id="bank-name">
+                    <option value="">Choose a bank</option>
+                    <option>CIBC Caribbean</option>
+                    <option>First Citizens Bank</option>
+                    <option>RBC Royal Bank</option>
+                    <option>Republic Bank</option>
+                    <option>Scotiabank</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="bank-branch">Branch</label>
+                <div class="govbb-input-wrapper" style="max-width: 24rem;"><input class="govbb-input" id="bank-branch" type="text" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="bank-account">Account number</label>
+                <p class="govbb-hint">We&rsquo;ll only use this account to pay your refund.</p>
+                <div class="govbb-input-wrapper" style="max-width: 16rem;"><input class="govbb-input" id="bank-account" type="text" inputmode="numeric" /></div>
+              </div>
+            </div>
+
+            <!-- Cheque -->
+            <div class="reveal" id="cheque-reveal">
+              <p class="govbb-text-body">We&rsquo;ll post the cheque to:</p>
+              <p class="govbb-text-body" style="font-weight: var(--font-weight-bold);">
+                Jane Smith<br />
+                23 Garden Land, Christ Church<br />
+                Barbados BB17052
+              </p>
+              <p class="govbb-text-body">
+                <a class="govbb-link" href="#">Change my address</a>
+              </p>
+            </div>
+
+            <!-- Certificates -->
+            <div class="reveal" id="certificates-reveal">
+              <p class="govbb-text-body">Choose how to split your BDS$ 350.00 across certificates. Each certificate has a fixed value.</p>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="cert-50">Number of BDS$ 50 certificates</label>
+                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-50" type="text" inputmode="numeric" value="0" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="cert-100">Number of BDS$ 100 certificates</label>
+                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-100" type="text" inputmode="numeric" value="3" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="cert-500">Number of BDS$ 500 certificates</label>
+                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-500" type="text" inputmode="numeric" value="0" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="cert-1000">Number of BDS$ 1,000 certificates</label>
+                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-1000" type="text" inputmode="numeric" value="0" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="cert-5000">Number of BDS$ 5,000 certificates</label>
+                <div class="govbb-input-wrapper" style="max-width: 7rem;"><input class="govbb-input" id="cert-5000" type="text" inputmode="numeric" value="0" /></div>
+              </div>
+            </div>
+          </section>
+
+          <div class="govbb-btn-group">
+            <button class="govbb-btn" type="submit">Continue</button>
+            <button class="save-link" type="button" onclick="window.location.href='file-return.html'">Save and come back later</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img class="govbb-footer__coat" src="assets/images/govbb-creast.svg" alt="Government of Barbados Coat of Arms" />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var radios = document.querySelectorAll('input[name="method"]');
+        var reveals = {
+          'direct':       document.getElementById('direct-reveal'),
+          'cheque':       document.getElementById('cheque-reveal'),
+          'certificates': document.getElementById('certificates-reveal')
+        };
+        function update() {
+          var picked = document.querySelector('input[name="method"]:checked');
+          Object.keys(reveals).forEach(function (k) {
+            reveals[k].classList.toggle('reveal--shown', picked && picked.value === k);
+          });
+        }
+        radios.forEach(function (r) { r.addEventListener('change', update); });
+        update();
+      })();
+    </script>
+
+  </body>
+</html>

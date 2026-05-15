@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create new sign in details &mdash; Sign in to BRA online services &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <style>
+      .form-page {
+        padding-block: var(--spacing-l);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xm);
+      }
+      @media (width >= 1024px) { .form-page { gap: var(--spacing-m); } }
+      .form-page__service-title {
+        display: inline-flex;
+        align-items: center;
+        padding: var(--spacing-xs) var(--spacing-s);
+        border-left: var(--spacing-xxs) solid var(--color-blue-40);
+        color: var(--color-mid-grey-00);
+      }
+      .form-page__heading { display: flex; flex-direction: column; gap: var(--spacing-s); }
+      .back-link {
+        display: inline-flex; align-items: center; gap: 0.25rem;
+        color: var(--color-link); text-decoration: underline; font-weight: var(--font-weight-bold);
+      }
+      .back-link::before {
+        content: ""; display: inline-block; width: 0.5rem; height: 0.5rem;
+        border-left: 2px solid currentColor; border-bottom: 2px solid currentColor;
+        transform: rotate(45deg); margin-right: 0.25rem;
+      }
+      .info-callout {
+        padding: var(--spacing-s) var(--spacing-xm);
+        background: var(--color-yellow-10);
+        border-left: 4px solid var(--color-yellow-100);
+      }
+      .info-callout h2 { margin: 0 0 var(--spacing-xs) 0; }
+      .info-callout p:last-child { margin-bottom: 0; }
+      .steps { display: flex; flex-direction: column; gap: var(--spacing-s); }
+    </style>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest">
+            <img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" />
+          </div>
+          <div class="govbb-official-banner__text">
+            <span>Official government website</span>
+          </div>
+        </div>
+      </div>
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+      <div class="govbb-status-banner govbb-status-banner--alpha" role="status" aria-label="alpha status banner" aria-live="polite">
+        <div class="govbb-container"><p>This page is in <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.</p></div>
+      </div>
+
+      <div class="govbb-container">
+        <div class="form-page">
+
+          <a class="back-link" href="sign-in.html">Back</a>
+
+          <div class="form-page__heading">
+            <span class="form-page__service-title govbb-text-body">Sign in to BRA online services</span>
+            <h1 class="govbb-text-display">Create new sign in details</h1>
+            <p class="govbb-text-body">
+              You will need a Taxpayer Identification Number (TIN) to use BRA online services.
+            </p>
+          </div>
+
+          <section class="steps">
+            <h2 class="govbb-text-h2">Before you start</h2>
+            <p class="govbb-text-body">You will need:</p>
+            <ul class="govbb-list govbb-list--bullet">
+              <li>your National Registration Number (NRN)</li>
+              <li>a valid email address</li>
+              <li>a mobile phone number to receive a verification code</li>
+            </ul>
+
+            <h2 class="govbb-text-h2">How it works</h2>
+            <ol class="govbb-list govbb-list--number">
+              <li>We&rsquo;ll look up your TIN using your NRN.</li>
+              <li>You&rsquo;ll set a password and verify your email.</li>
+              <li>We&rsquo;ll send a code to your phone to confirm it&rsquo;s you.</li>
+              <li>You can then sign in and use BRA online services.</li>
+            </ol>
+          </section>
+
+          <div class="info-callout">
+            <h2 class="govbb-text-h3">Don&rsquo;t have a TIN yet?</h2>
+            <p class="govbb-text-body">
+              You need a TIN to register, pay or file taxes in Barbados. You can
+              <a class="govbb-link" href="#">apply for a TIN online</a> or call BRA on 246-429-2273.
+            </p>
+          </div>
+
+          <div class="govbb-btn-group">
+            <a class="govbb-btn" href="#">Start now</a>
+            <a class="govbb-btn govbb-btn--secondary" href="sign-in.html">Cancel</a>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Accessibility statement</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img class="govbb-footer__coat" src="assets/images/govbb-creast.svg" alt="Government of Barbados Coat of Arms" />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

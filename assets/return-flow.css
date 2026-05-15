@@ -1,0 +1,263 @@
+/* Shared styles for the Personal Income Tax return flow.
+   Builds on top of @govtech-bb/styles using design system tokens. */
+
+.form-page {
+  padding-block: var(--spacing-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xm);
+}
+@media (width >= 1024px) { .form-page { gap: var(--spacing-m); } }
+
+.form-page__service-title {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-s);
+  border-left: var(--spacing-xxs) solid var(--color-blue-40);
+  color: var(--color-mid-grey-00);
+}
+
+.form-page__heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+/* Back link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-link);
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+.back-link::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-right: 0.25rem;
+}
+
+.progress {
+  color: var(--color-mid-grey-00);
+  font-size: var(--font-size-caption);
+  margin: 0;
+}
+
+/* Radio / checkbox option list */
+.radio-options, .checkbox-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  margin-top: var(--spacing-s);
+}
+.radio-option, .checkbox-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-s);
+}
+.radio-option__body, .checkbox-option__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+  flex: 1;
+}
+.radio-option__label, .checkbox-option__label {
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+.radio-option__hint, .checkbox-option__hint {
+  margin: 0;
+  color: var(--color-mid-grey-00);
+}
+
+.radio-divider {
+  display: flex;
+  align-items: center;
+  color: var(--color-mid-grey-00);
+  font-weight: var(--font-weight-bold);
+  margin-block: var(--spacing-xs);
+}
+.radio-divider::before,
+.radio-divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--color-grey-00);
+}
+.radio-divider::before { margin-right: var(--spacing-s); }
+.radio-divider::after  { margin-left: var(--spacing-s); }
+
+/* Reveal panel for conditional questions */
+.reveal {
+  display: none;
+  margin-top: var(--spacing-s);
+  margin-left: 1.5rem;
+  padding-left: var(--spacing-xm);
+  border-left: 8px solid var(--color-grey-00);
+  padding-block: var(--spacing-s);
+}
+.reveal--shown { display: block; }
+
+/* Pre-fill data card */
+.data-card {
+  border: 2px solid var(--color-blue-40);
+  background: var(--color-blue-10);
+  padding: var(--spacing-s) var(--spacing-xm);
+}
+.data-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-s);
+}
+.data-card__source {
+  font-size: var(--font-size-caption-sm);
+  color: var(--color-mid-grey-00);
+}
+.data-card__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding-top: var(--spacing-s);
+  border-top: 1px solid var(--color-blue-40);
+}
+.data-card__row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-s);
+}
+.data-card__row dt { margin: 0; color: var(--color-mid-grey-00); }
+.data-card__row dd { margin: 0; font-weight: var(--font-weight-bold); }
+
+.currency {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+/* Currency prefix on input */
+.currency-input {
+  display: flex;
+  align-items: stretch;
+  border: 2px solid var(--color-black-00);
+  background: var(--color-background);
+  max-width: 16rem;
+}
+.currency-input__prefix {
+  background: var(--color-grey-00);
+  padding: var(--spacing-xs) var(--spacing-s);
+  font-weight: var(--font-weight-bold);
+}
+.currency-input__input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  padding: var(--spacing-xs) var(--spacing-s);
+  font: inherit;
+  min-width: 0;
+}
+
+/* Inline amount field nested under a checkbox */
+.amount-field {
+  margin-top: var(--spacing-xs);
+  margin-left: 1.5rem;
+  max-width: 18rem;
+}
+
+/* Badges */
+.preset-badge {
+  display: inline-block;
+  font-size: var(--font-size-caption-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  background: var(--color-blue-100);
+  color: var(--color-white-00);
+  margin-left: var(--spacing-xs);
+}
+.optional-badge {
+  display: inline-block;
+  font-size: var(--font-size-caption-sm);
+  color: var(--color-mid-grey-00);
+  margin-left: var(--spacing-xs);
+}
+.advanced-badge {
+  display: inline-block;
+  font-size: var(--font-size-caption-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  background: var(--color-purple-100);
+  color: var(--color-white-00);
+}
+
+/* Group of fields under a sub-heading on the same page */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+.field-group h2 { margin: 0 0 var(--spacing-xs) 0; }
+.field-group h3 { margin: 0; }
+
+.section + .section { margin-top: var(--spacing-m); }
+
+/* Callouts */
+.callout {
+  padding: var(--spacing-s) var(--spacing-xm);
+}
+.callout--info {
+  background: var(--color-blue-10);
+  border-left: 4px solid var(--color-blue-100);
+}
+.callout--warning {
+  background: var(--color-yellow-10);
+  border-left: 4px solid var(--color-yellow-100);
+}
+.callout--success {
+  background: var(--color-green-10);
+  border-left: 4px solid var(--color-green-00);
+}
+.callout h2 { margin: 0 0 var(--spacing-xs) 0; }
+.callout p:last-child { margin: 0; }
+
+/* Save-and-come-back secondary action */
+.save-link {
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-link);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Summary list */
+.summary {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-grey-00);
+}
+.summary__row {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: var(--spacing-s);
+  padding-block: var(--spacing-s);
+  border-bottom: 1px solid var(--color-grey-00);
+  align-items: start;
+}
+.summary__key { margin: 0; color: var(--color-mid-grey-00); }
+.summary__value { margin: 0; font-weight: var(--font-weight-bold); }
+.summary__action { margin: 0; text-align: right; }
+@media (max-width: 640px) {
+  .summary__row { grid-template-columns: 1fr; gap: 0.25rem; }
+  .summary__action { text-align: left; }
+}

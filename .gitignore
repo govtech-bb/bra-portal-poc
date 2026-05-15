@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (in case anything is added later)
+node_modules/
+
+# AWS / local debug
+*.har
+*.har.gz
+tamis-trace.txt
+
+# Reverse-engineering artefacts kept locally only — never commit, even when repo is private
+tamis-recon.md
+tamis-recon/
+tamis-recon-*/
+tamis-pdfs/
+
+# Local env / secrets
+.env
+.env.*

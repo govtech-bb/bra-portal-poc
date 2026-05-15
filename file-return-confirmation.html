@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return sent &mdash; File your Personal Income Tax return for 2025 &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <style>
+      .form-page { padding-block: var(--spacing-l); display: flex; flex-direction: column; gap: var(--spacing-xm); }
+      @media (width >= 1024px) { .form-page { gap: var(--spacing-m); } }
+
+      /* Confirmation panel */
+      .panel {
+        background: var(--color-green-00);
+        color: var(--color-white-00);
+        padding: var(--spacing-m) var(--spacing-xm);
+        text-align: center;
+      }
+      .panel__heading {
+        margin: 0 0 var(--spacing-s) 0;
+        font-size: var(--font-size-h2);
+        font-weight: var(--font-weight-bold);
+      }
+      .panel__ref {
+        margin: 0;
+        font-size: var(--font-size-h3);
+      }
+      .panel__ref strong {
+        display: block;
+        margin-top: var(--spacing-xs);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: var(--font-size-h2);
+        letter-spacing: 0.05em;
+      }
+
+      .next-steps {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-s);
+      }
+      .next-steps h2 { margin: 0; }
+      .next-steps ol { padding-left: var(--spacing-xm); margin: 0; }
+      .next-steps li { margin-bottom: var(--spacing-xs); }
+
+      .refund-callout {
+        padding: var(--spacing-s) var(--spacing-xm);
+        background: var(--color-green-10);
+        border-left: 4px solid var(--color-green-00);
+      }
+      .refund-callout h2 { margin: 0 0 var(--spacing-xs) 0; color: var(--color-green-00); }
+      .refund-callout p { margin: 0 0 var(--spacing-xs) 0; }
+      .refund-amount {
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: var(--font-size-h3);
+        font-weight: var(--font-weight-bold);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-s);
+        margin-top: var(--spacing-s);
+      }
+      .actions a { text-decoration: underline; font-weight: var(--font-weight-bold); color: var(--color-link); }
+
+      .feedback-survey {
+        background: var(--color-yellow-40);
+        border: 4px solid var(--color-yellow-100);
+        padding: var(--spacing-s) var(--spacing-xm);
+      }
+      .feedback-survey h2 { margin: 0 0 var(--spacing-xs) 0; }
+      .feedback-survey p { margin: 0 0 var(--spacing-xs) 0; }
+
+      @media print {
+        .actions, .feedback-survey, .back-link, .govbb-status-banner { display: none !important; }
+      }
+    </style>
+    <script src="assets/flow.js" defer></script>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest"><img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" /></div>
+          <div class="govbb-official-banner__text"><span>Official government website</span></div>
+        </div>
+      </div>
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+      <div class="govbb-status-banner govbb-status-banner--alpha" role="status" aria-label="alpha status banner" aria-live="polite">
+        <div class="govbb-container"><p>This page is in <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.</p></div>
+      </div>
+
+      <div class="govbb-container">
+        <div class="form-page">
+
+          <!-- Success panel -->
+          <div class="panel" role="status" aria-live="polite">
+            <h1 class="panel__heading">Return sent</h1>
+            <p class="panel__ref">
+              Your reference number is
+              <strong>BRA-IT2025-3F92AB</strong>
+            </p>
+          </div>
+
+          <p class="govbb-text-body">
+            We&rsquo;ve sent a confirmation email to <strong>jane.smith@example.com</strong>. Keep your reference
+            number in case you need to contact BRA about this return.
+          </p>
+
+          <!-- Refund callout -->
+          <div class="refund-callout">
+            <h2 class="govbb-text-h3">You are owed a refund</h2>
+            <p class="govbb-text-body">
+              <span class="refund-amount">BDS$ 350.00</span>
+            </p>
+            <p class="govbb-text-body">
+              We will pay this to your registered bank account within 14 working days.
+              <a class="govbb-link" href="#">Update your bank details</a>
+              if these have changed.
+            </p>
+          </div>
+
+          <!-- What happens next -->
+          <section class="next-steps">
+            <h2 class="govbb-text-h2">What happens next</h2>
+            <ol>
+              <li>BRA will review your return.</li>
+              <li>If we need more information, we&rsquo;ll contact you using the details on your account.</li>
+              <li>Your refund will be paid within 14 working days.</li>
+              <li>You can check the status of your refund any time from your
+                <a class="govbb-link" href="dashboard.html">BRA account home</a>.</li>
+            </ol>
+          </section>
+
+          <section class="next-steps">
+            <h2 class="govbb-text-h2">If you don&rsquo;t hear from us</h2>
+            <p class="govbb-text-body">
+              If you haven&rsquo;t received your refund after 14 working days, call BRA on
+              <strong>246-429-2273</strong> between 8:30am and 4:30pm, Monday to Friday. Have your reference number ready.
+            </p>
+          </section>
+
+          <div class="actions">
+            <a href="#" onclick="window.print(); return false;">Print this page</a>
+            <a href="#">Download your return as a PDF</a>
+            <a href="dashboard.html">Return to your BRA account</a>
+          </div>
+
+          <div class="feedback-survey">
+            <h2 class="govbb-text-h3">Tell us what you thought of this service</h2>
+            <p class="govbb-text-body">Your feedback helps us make BRA online services better.</p>
+            <a class="govbb-link" href="#">Take the 2-minute survey (opens in a new tab)</a>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img class="govbb-footer__coat" src="assets/images/govbb-creast.svg" alt="Government of Barbados Coat of Arms" />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

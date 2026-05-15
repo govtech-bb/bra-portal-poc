@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pension income &mdash; File your Personal Income Tax return for 2025 &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <link rel="stylesheet" href="assets/return-flow.css" />
+    <script src="assets/flow.js" defer></script>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest"><img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" /></div>
+          <div class="govbb-official-banner__text"><span>Official government website</span></div>
+        </div>
+      </div>
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+      <div class="govbb-status-banner govbb-status-banner--alpha" role="status" aria-label="alpha status banner" aria-live="polite">
+        <div class="govbb-container"><p>This page is in <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.</p></div>
+      </div>
+
+      <div class="govbb-container">
+        <form class="form-page" action="file-return-investments.html" method="get" novalidate>
+
+          <a class="back-link" href="file-return-employment.html">Back</a>
+
+          <div class="form-page__heading">
+            <span class="form-page__service-title govbb-text-body">File your Personal Income Tax return for 2025</span>
+            <p class="progress">Step 3 of 6 &mdash; Your income</p>
+            <h1 class="govbb-text-display">Your pension income</h1>
+            <p class="govbb-text-body">
+              Tell us about any pension you received in 2025. We&rsquo;ve filled in what your pension provider already reported.
+            </p>
+          </div>
+
+          <!-- Pre-filled pension from third party -->
+          <section class="section">
+            <h2 class="govbb-text-h2">Pension your provider reported</h2>
+
+            <div class="data-card" aria-labelledby="provider-1">
+              <div class="data-card__head">
+                <h3 id="provider-1" class="govbb-text-h3" style="margin: 0;">National Insurance Scheme (NIS)</h3>
+                <span class="data-card__source">Reported by your pension provider</span>
+              </div>
+              <dl class="data-card__rows">
+                <div class="data-card__row">
+                  <dt>Total pension paid</dt>
+                  <dd class="currency">BDS$ 0.00</dd>
+                </div>
+                <div class="data-card__row">
+                  <dt>Tax taken out</dt>
+                  <dd class="currency">BDS$ 0.00</dd>
+                </div>
+              </dl>
+            </div>
+
+            <p class="govbb-text-body" style="margin-top: var(--spacing-s);">
+              <span class="optional-badge">No pension reported</span>
+              If your provider has not reported your pension to BRA, you can add it below.
+            </p>
+          </section>
+
+          <!-- Manual entry -->
+          <section class="section">
+            <h2 class="govbb-text-h2">Add a pension we don&rsquo;t know about</h2>
+            <p class="govbb-text-body">
+              Use this if you received a pension from a foreign pension fund, a private fund, or any source that hasn&rsquo;t reported to BRA.
+            </p>
+
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="add-pension-source">Name of pension provider <span class="optional-badge">Optional</span></label>
+              <div class="govbb-input-wrapper"><input class="govbb-input" id="add-pension-source" type="text" /></div>
+            </div>
+
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="add-pension-total">Total pension paid in 2025</label>
+              <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-pension-total" type="text" inputmode="decimal" /></div>
+            </div>
+
+            <div class="govbb-form-group">
+              <label class="govbb-label" for="add-pension-tax">Tax taken out <span class="optional-badge">Optional</span></label>
+              <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="add-pension-tax" type="text" inputmode="decimal" /></div>
+            </div>
+          </section>
+
+          <!-- Pension contribution refund (alternate calculation) -->
+          <section class="section">
+            <h2 class="govbb-text-h2">Did you get money back from your pension fund in 2025? <span class="advanced-badge">Advanced</span></h2>
+            <p class="govbb-text-body">
+              If your pension fund returned contributions to you (because you left the scheme or it was wound up), you can choose to have it taxed using a special calculation instead of being added to your other income.
+            </p>
+
+            <div class="govbb-form-group">
+              <fieldset class="govbb-fieldset">
+                <legend class="govbb-fieldset__legend govbb-visually-hidden">Pension contribution refund</legend>
+                <div class="radio-options">
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="refund-no" type="radio" name="pension-refund" value="no" checked />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="refund-no">No</label>
+                    </div>
+                  </div>
+                  <div class="radio-option">
+                    <input class="govbb-radio" id="refund-yes" type="radio" name="pension-refund" value="yes" />
+                    <div class="radio-option__body">
+                      <label class="radio-option__label govbb-text-body" for="refund-yes">Yes, I received a pension contribution refund</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="reveal" id="refund-reveal">
+              <div class="callout callout--info">
+                <p class="govbb-text-body">
+                  BRA will work out the tax due using the alternate calculation set out in the Income Tax Act.
+                </p>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="refund-amount">Amount of contributions refunded</label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="refund-amount" type="text" inputmode="decimal" /></div>
+              </div>
+              <div class="govbb-form-group">
+                <label class="govbb-label" for="refund-tax-withheld">Tax already withheld from the refund <span class="optional-badge">Optional</span></label>
+                <div class="currency-input"><span class="currency-input__prefix">BDS$</span><input class="currency-input__input" id="refund-tax-withheld" type="text" inputmode="decimal" /></div>
+              </div>
+            </div>
+          </section>
+
+          <div class="govbb-btn-group">
+            <button class="govbb-btn" type="submit">Continue</button>
+            <button class="save-link" type="button" onclick="window.location.href='file-return.html'">Save and come back later</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img class="govbb-footer__coat" src="assets/images/govbb-creast.svg" alt="Government of Barbados Coat of Arms" />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var radios = document.querySelectorAll('input[name="pension-refund"]');
+        var reveal = document.getElementById('refund-reveal');
+        function update() {
+          if (document.getElementById('refund-yes').checked) reveal.classList.add('reveal--shown');
+          else reveal.classList.remove('reveal--shown');
+        }
+        radios.forEach(function (r) { r.addEventListener('change', update); });
+        update();
+      })();
+    </script>
+
+  </body>
+</html>

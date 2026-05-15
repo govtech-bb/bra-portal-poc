@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supporting documents &mdash; File your Personal Income Tax return for 2025 &mdash; The Government of Barbados</title>
+    <link rel="stylesheet" href="assets/govbb.css" />
+    <link rel="stylesheet" href="assets/return-flow.css" />
+    <style>
+      .upload-box {
+        border: 2px dashed var(--color-grey-00);
+        background: var(--color-grey-00, #e0e4e9);
+        padding: var(--spacing-m);
+        text-align: center;
+      }
+      .upload-box__cta { margin-top: var(--spacing-s); }
+      .file-list { display: flex; flex-direction: column; gap: var(--spacing-xs); margin: var(--spacing-s) 0 0 0; padding: 0; list-style: none; }
+      .file-list__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--spacing-s);
+        padding: var(--spacing-xs) var(--spacing-s);
+        background: var(--color-background);
+        border: 1px solid var(--color-grey-00);
+      }
+      .file-list__name { font-weight: var(--font-weight-bold); }
+      .file-list__size { color: var(--color-mid-grey-00); font-size: var(--font-size-caption); }
+    </style>
+    <script src="assets/flow.js" defer></script>
+  </head>
+  <body class="govbb-page">
+
+    <div>
+      <div class="govbb-official-banner">
+        <div class="govbb-container govbb-official-banner__inner">
+          <div class="govbb-official-banner__crest"><img class="govbb-official-banner__icon" src="assets/images/govbb-creast.svg" alt="" /></div>
+          <div class="govbb-official-banner__text"><span>Official government website</span></div>
+        </div>
+      </div>
+      <header class="govbb-header">
+        <div class="govbb-container govbb-header__inner">
+          <a href="/" aria-label="Go to the alpha.gov.bb homepage">
+            <img class="govbb-header__logo" src="assets/images/govbb-logo.svg" alt="GOVBB" />
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <main class="govbb-page__main">
+      <div class="govbb-status-banner govbb-status-banner--alpha" role="status" aria-label="alpha status banner" aria-live="polite">
+        <div class="govbb-container"><p>This page is in <a class="govbb-link govbb-link--secondary" href="#">Alpha</a>.</p></div>
+      </div>
+
+      <div class="govbb-container">
+        <form class="form-page" action="file-return-check.html" method="get" novalidate>
+
+          <a class="back-link" href="file-return-refund-method.html">Back</a>
+
+          <div class="form-page__heading">
+            <span class="form-page__service-title govbb-text-body">File your Personal Income Tax return for 2025</span>
+            <p class="progress">Step 5 of 6</p>
+            <h1 class="govbb-text-display">Upload anything that supports your return <span class="optional-badge">Optional</span></h1>
+            <p class="govbb-text-body">
+              You don&rsquo;t have to upload anything to file. But if you have receipts, statements or other documents that back up what you&rsquo;ve told us, you can attach them here.
+            </p>
+          </div>
+
+          <div class="callout callout--info">
+            <h2 class="govbb-text-h3">What we accept</h2>
+            <p class="govbb-text-body">
+              PDF, text, images (JPG, PNG, GIF, BMP) or Excel files. Up to <strong>60 MB</strong> per file.
+            </p>
+          </div>
+
+          <div class="upload-box">
+            <p class="govbb-text-body" style="margin: 0;">Drag your files here, or</p>
+            <p class="upload-box__cta" style="margin: 0;">
+              <label for="file-upload" class="govbb-btn govbb-btn--secondary" style="display: inline-block; cursor: pointer;">Choose files from your device</label>
+              <input id="file-upload" type="file" multiple style="display: none;" accept=".pdf,.txt,.xml,.gif,.jpg,.jpeg,.png,.bmp,.xlsx,.xls" />
+            </p>
+          </div>
+
+          <h2 class="govbb-text-h3" style="margin-top: var(--spacing-m);">Files you&rsquo;ve attached</h2>
+          <ul class="file-list" id="file-list">
+            <li class="file-list__item">
+              <span><span class="file-list__name">P14-2025.pdf</span> <span class="file-list__size">142 KB</span></span>
+              <a class="govbb-link" href="#">Remove</a>
+            </li>
+          </ul>
+
+          <div class="callout callout--warning" style="margin-top: var(--spacing-m);">
+            <h2 class="govbb-text-h3">A note on what to include</h2>
+            <p class="govbb-text-body">
+              Useful documents include your PAYE statement (P14), receipts for medical bills, donation receipts,
+              NIS statements, pension statements, mortgage interest statements, and energy installation receipts.
+            </p>
+          </div>
+
+          <div class="govbb-btn-group">
+            <button class="govbb-btn" type="submit">Continue</button>
+            <button class="save-link" type="button" onclick="window.location.href='file-return.html'">Save and come back later</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+    <footer class="govbb-footer">
+      <div class="govbb-container govbb-footer__inner">
+        <nav class="govbb-footer__nav" aria-label="Footer">
+          <a class="govbb-footer__link" href="#">Cookies</a>
+          <a class="govbb-footer__link" href="#">Privacy policy</a>
+          <a class="govbb-footer__link" href="#">Terms and conditions</a>
+        </nav>
+        <hr class="govbb-footer__divider" aria-hidden="true" />
+        <div class="govbb-footer__end">
+          <img class="govbb-footer__coat" src="assets/images/govbb-creast.svg" alt="Government of Barbados Coat of Arms" />
+          <p class="govbb-footer__copy">&copy; 2026 Government of Barbados</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
